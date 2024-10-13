@@ -3,6 +3,7 @@ import PackageCard from "@/components/PackageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const toggleMobileMenu = ()=>{
@@ -10,6 +11,11 @@ export default function Home() {
   }
   return (
     <>
+    <Head>
+      <title>Al Habib Travel</title>
+      <meta name="description" content="Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK" />
+      <meta property="og:image" content="https://al-habib-travels-next-app.vercel.app/img/ogimage1.png" />
+    </Head>
     <header className="min-h-screen flex flex-col">
       <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">
         <p className="text-white text-center text-xs xs:text-sm">Welcome to Al Habib Travels | Your Trusted Hajj and Umrah Partner</p>
