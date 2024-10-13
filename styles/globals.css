@@ -2,32 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  --brand-blue: #00454A;
+  --brand-yellow: #D4A10F;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.brand-blue{
+  color: var(--brand-blue);
+}
+.brand-yellow{
+  color: var(--brand-yellow);
+}
+.bg-brand-blue{
+  background-color: var(--brand-blue);
+}
+.bg-brand-yellow{
+  background-color: var(--brand-yellow);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+header{
+  background-image: url(/img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-color: #00454a2f; */
+  /* background: linear-gradient(180deg, #00454A, black); */
+  background-color: rgba(0, 0, 0, 0.358);
+  background-blend-mode: darken;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.header-text{
+  text-shadow: 4px 4px 16px black;
+  /* -webkit-text-stroke: 2px rgba(0, 0, 0, 0.374); */
+}
+
+#query-form-section{}
+
+.pkgcard{
+  min-width: 330px;
+  width: min-content;
+}
+
+.pkgcard .imgHolder{
+  aspect-ratio: 10/8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#special-offer-section{
+  background-image: url(/img/bg-vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #00454a;
+  background-blend-mode: multiply;
+}
+
+#mobile-menu.open{
+  left: 0;
 }
