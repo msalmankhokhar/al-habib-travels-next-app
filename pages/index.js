@@ -33,7 +33,7 @@ export default function Home() {
           <li><a className="text-sm" href="#">Contact</a></li>
           <li><a className="text-sm" href="#">About Us</a></li>
         </ul>
-        <div id="mobile-menu" className="fixed flex flex-col top-0 bottom-0 -left-3/4 transition-all duration-300 bg-white w-3/4">
+        <div id="mobile-menu" className="fixed md:hidden flex flex-col top-0 bottom-0 -left-3/4 transition-all duration-300 bg-white w-3/4">
           <ul className="flex flex-col mt-10">
             <li className="w-full border px-5 py-3"><a className="text-sm" href="#">Home</a></li>
             <li className="w-full border px-5 py-3"><a className="text-sm" href="#">Umrah Packages</a></li>
@@ -43,7 +43,7 @@ export default function Home() {
             <li className="w-full border px-5 py-3"><a className="text-sm" href="#">About Us</a></li>
           </ul>
         </div>
-        <button type="button" onClick={toggleMobileMenu} className="border rounded-md py-2 px-5">
+        <button type="button" onClick={toggleMobileMenu} className="md:hidden block border rounded-md py-2 px-5">
           <FontAwesomeIcon className="text-xl brand-blue" icon={faBars}/>
         </button>
       </nav>
@@ -58,7 +58,7 @@ export default function Home() {
         <h1 className="font-bold brand-blue text-3xl">Package Customization Form</h1>
         <p className="text-gray-500">Fill your travel requirements below. Our team will get back to you</p>
         <form action="" className="mt-5 w-full max-w-screen-lg flex flex-col gap-3">
-          <div className="w-full flex flex-wrap gap-3">
+          <div className="w-full flex flex-col sm:flex-row gap-3">
             <div className="flex flex-col gap-2 w-full">
               <label htmlFor="name-input" className="text-sm">Your Full Name*</label>
               <input id="name-input" type="text" className="p-3 focus:outline-none ring-transparent ring-2 focus:ring-yellow-400 rounded-full border text-sm transition-all duration-300" placeholder="Your Name" />
@@ -68,7 +68,7 @@ export default function Home() {
               <input type="email" className="p-3 focus:outline-none ring-transparent ring-2 focus:ring-yellow-400 rounded-full w-full border text-sm transition-all duration-300" placeholder="Email" />
             </div>
           </div>
-          <div className="w-full flex flex-wrap gap-3">
+          <div className="w-full flex flex-col sm:flex-row gap-3">
             <div className="flex flex-col gap-2 w-full">
                 <label htmlFor="name-input" className="text-sm">Phone Number</label>
                 <input type="tel" className="p-3 focus:outline-none ring-transparent ring-2 focus:ring-yellow-400 rounded-full w-full border text-sm transition-all duration-300" placeholder="Phone" />
@@ -78,7 +78,7 @@ export default function Home() {
               <input type="number" className="p-3 focus:outline-none ring-transparent ring-2 focus:ring-yellow-400 rounded-full w-full border text-sm transition-all duration-300" placeholder="No. of People" />
             </div>
           </div>
-          <div className="w-full flex flex-wrap gap-3">
+          <div className="w-full flex flex-col sm:flex-row gap-3">
             <div className="flex flex-col gap-2 w-full">
               <label htmlFor="name-input" className="text-sm">Month of Departure*</label>
               <select className="p-3 focus:outline-none ring-transparent ring-2 focus:ring-yellow-400 rounded-full w-full border text-sm transition-all duration-300" placeholder="Departure Month" >
@@ -101,7 +101,7 @@ export default function Home() {
         </form>
       </div>
 
-      <div id="youtube-video-section" className="px-5 flex flex-wrap gap-5 justify-around">
+      <div id="youtube-video-section" className="px-5 flex flex-col lg:flex-row gap-5 justify-around">
         <div className="flex flex-col gap-5 max-w-screen-sm w-full">
           <h1 className="font-bold brand-blue text-3xl">Lets plan your <span className="brand-yellow">Umrah</span> Package</h1>
           <h2 className="font-bold brand-yellow text-xl">{`"Explore Umrah at our official youtube channel"`}</h2>
@@ -110,12 +110,12 @@ export default function Home() {
           </p>
           <button type="button" className="min-w-36 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Watch Now</button>
         </div>
-        <iframe className="w-full" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe id="yt-video-iframe" className="w-full" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
       <div id="pkg-listing-section" className="px-5 flex flex-col justify-center items-center gap-5">
         <h1 className="font-bold brand-blue text-3xl">Popular Packages</h1>
-        <div className="pkg-container flex flex-wrap gap-5">
+        <div className="pkg-container flex flex-wrap gap-5 justify-center">
           <PackageCard/>
           <PackageCard/>
           <PackageCard/>
@@ -125,7 +125,7 @@ export default function Home() {
 
       <div id="four-star-section" className="px-5 flex flex-col justify-center items-center gap-5">
         <h1 className="font-bold brand-blue text-3xl">4 Star Packages</h1>
-        <div className="pkg-container flex flex-wrap gap-5">
+        <div className="pkg-container flex flex-wrap gap-5 justify-center">
           <PackageCard/>
           <PackageCard/>
           <PackageCard/>
@@ -135,7 +135,7 @@ export default function Home() {
 
       <div id="four-star-section" className="px-5 flex flex-col justify-center items-center gap-5">
         <h1 className="font-bold brand-blue text-3xl">3 Star Packages</h1>
-        <div className="pkg-container flex flex-wrap gap-5">
+        <div className="pkg-container flex flex-wrap gap-5 justify-center">
           <PackageCard/>
           <PackageCard/>
           <PackageCard/>
@@ -143,16 +143,16 @@ export default function Home() {
         <button type="button" className="min-w-36 w-min border bg-gray-100 hover:bg-white transition-colors duration-300 text-sm p-3 rounded-full">Load More</button>
       </div>
 
-      <div id="special-offer-section" className="px-5 py-16 flex flex-wrap gap-5 justify-around bg-teal-900">
+      <div id="special-offer-section" className="px-5 py-16 flex flex-col items-center lg:flex-row gap-5 justify-around bg-teal-900">
         <div className="flex flex-col gap-5 max-w-screen-sm w-full">
           <h1 className="font-bold text-3xl text-white">Special Offers</h1>
           <h2 className="font-bold brand-yellow text-xl">{`"Unlock special offers on your Hajj and Umrah Journey"`}</h2>
           <p className="text-white">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita eaque optio labore temporibus. Aperiam dolorem molestiae nihil officiis error dolor. Nobis ea qui assumenda quisquam facere perspiciatis ab, commodi veritatis aperiam molestias vel quia voluptate fugiat voluptatem excepturi! Dolores, quibusdam! Nobis vel dolores excepturi qui quisquam aperiam at distinctio, eaque unde alias aliquam omnis minus fuga.
           </p>
-          <button type="button" className="min-w-36 w-min bg-white text-teal-900 hover:text-teal-700 transition-colors duration-300 text-sm p-3 rounded-full">Book Now</button>
+          <button type="button" className="font-semibold min-w-36 w-min bg-white text-teal-900 hover:text-teal-700 transition-colors duration-300 text-sm p-3 rounded-full">Book Now</button>
         </div>
-        <Image src={'/img/favBg.jpg'} height={400} width={450} className="rounded-md" alt="hajj crowd"/>
+        <Image src={'/img/favBg.jpg'} width={550} height={550} className="rounded-md" alt="hajj crowd"/>
       </div>
     </main>
     </>
