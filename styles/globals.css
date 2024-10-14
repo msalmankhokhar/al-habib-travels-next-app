@@ -20,15 +20,15 @@
   background-color: var(--brand-yellow);
 }
 
-header{
+/* header{
   background: linear-gradient(180deg, #00454A, black);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-color: rgba(0, 0, 0, 0.358);
-  background-blend-mode: darken; */
+  background-color: rgba(0, 0, 0, 0.358);
+  background-blend-mode: darken;
   background-image: url(/img/bg.png);
-}
+} */
 
 .header-text{
   text-shadow: 4px 4px 16px black;

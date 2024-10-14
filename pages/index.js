@@ -7,6 +7,7 @@ import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
+import bgImg from '@/public/img/bg.png'
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -15,12 +16,13 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         title={"Al Habib Travels"}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
-      <header className="min-h-screen flex flex-col">
+      <header className="min-h-screen relative flex flex-col">
         <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">
           <p className="text-white text-center text-xs xs:text-sm">Welcome to Al Habib Travels | Your Trusted Hajj and Umrah Partner</p>
         </div>
 
         <Navbar />
+        <Image decoding="async" fill className="-z-50" objectFit="cover" objectPosition="center"alt="cover photo hajj" src={bgImg} placeholder="blur"/>
 
         <div id="header-content" className="h-full flex-1 px-5 py-5 flex flex-col gap-5 items-center justify-center">
           <p className="text-center tracking-wide leading-snug header-text font-bold text-5xl text-white">Let{"'"}s plan your Holy moments<br /> with our travel packages</p>

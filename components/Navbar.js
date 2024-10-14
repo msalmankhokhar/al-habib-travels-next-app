@@ -21,9 +21,9 @@ export default function Navbar() {
                 <div>
                     <Image src="/img/logos/logo.png" alt="al habib travel logo" width={55} height={55} />
                 </div>
-                <div className="sm:flex hidden gap-1 items-baseline leading-none font-bold text-xl brand-blue">
-                    <div>Al HABIB</div>
-                    <div className="text-sm text-slate-600">TRAVEL</div>
+                <div className="sm:flex mb-1 gap-1 items-baseline leading-none font-bold md:text-xl text-lg brand-blue">
+                    <div>AL HABIB</div>
+                    <div>TRAVEL</div>
                 </div>
             </div>
             <ul className="md:flex gap-5 hidden items-center">
