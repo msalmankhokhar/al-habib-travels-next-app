@@ -37,7 +37,7 @@ export default function Navbar() {
             <div id="mobile-menu" className="z-50 fixed md:hidden flex flex-col top-0 bottom-0 -left-3/4 transition-all duration-300 bg-white w-3/4">
                 <ul className="flex flex-col mt-10">
                     <li className="w-full border px-5 py-3"><Link className="text-sm" href="/">Home</Link></li>
-                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="#pkg-listing-section">Umrah Packages</Link></li>
+                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="/#pkg-listing-section">Umrah Packages</Link></li>
                     <li className="w-full border px-5 py-3"><Link className="text-sm" href="#">Hajj Packages</Link></li>
                     <li className="w-full border px-5 py-3"><Link className="text-sm" href="#">Blog</Link></li>
                     <li className="w-full border px-5 py-3"><Link className="text-sm" href="#">Contact</Link></li>
