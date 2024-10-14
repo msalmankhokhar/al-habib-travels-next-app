@@ -2,10 +2,11 @@ import Image from "next/image";
 import PackageCard from "@/components/PackageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import prisma from "@/lib/prisma";
+import connectDb, { serializePackages } from "@/lib/mongoose";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Package from "@/models/Package";
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -92,7 +93,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
             {
               popularPkgs.length > 0 ? popularPkgs.map((pkg)=>{
-                return <PackageCard key={pkg.title} {... pkg}/>
+                return <PackageCard key={pkg.title} {...pkg}/>
               }) : (<p className="text-red-500 font-black">No Packages found</p>)
             }
           </div>
@@ -143,16 +144,17 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
 
 // Fetch packages with Server side rendering
 export async function getServerSideProps() {
-  const packages = await prisma.package.findMany(); // Adjust according to your schema/model
+  await connectDb();
+  const packages = await Package.find({}).lean() // fetch all packages
   const popularPkgs = packages.filter(pkg => pkg.rating === 5);
   const fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
   const threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
 
   return {
     props: {
-      popularPkgs,
-      fourStarPkgs,
-      threeStarPkgs
+      popularPkgs : serializePackages(popularPkgs),
+      fourStarPkgs : serializePackages(fourStarPkgs),
+      threeStarPkgs : serializePackages(threeStarPkgs)
     },
   };
 }

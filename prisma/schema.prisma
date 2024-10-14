@@ -6,12 +6,12 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model Package {
-  title String @id
+  title String @id @default(auto()) @map("_id") @db.ObjectId
   type String @default("Umrah")
   rating Int
   nights Int

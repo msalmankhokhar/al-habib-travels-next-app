@@ -59,7 +59,7 @@ export default function PackageCard({ title, imgSrc, price, rating, makkahHotel,
             <FontAwesomeIcon icon={faCheck} className="text-xs absolute right-10" />
           </div>
         </div>
-        <Link scroll={false} href={`/pkg/${title}`} className="text-center min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">View Details</Link>
+        <Link scroll={false} href={`/package/${title}`} className="text-center min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">View Details</Link>
       </div>
     </div>
   )

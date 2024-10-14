@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
-import prisma from "@/lib/prisma"
+import connectDb, { serializePackages } from "@/lib/mongoose";
+import Package from "@/models/Package";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -123,9 +124,7 @@ export default function PackageDetail({ pkg }) {
 export async function getServerSideProps(context) {
     const { title } = context.query;
 
-    const pkg = await prisma.package.findUnique({
-        where: { title },
-    });
+    const pkg = await Package.findOne({ title }).lean();
 
     if (!pkg) {
         return {
@@ -133,6 +132,6 @@ export async function getServerSideProps(context) {
         };
     }
     return {
-        props: { pkg }, // Pass package data as props
+        props: { pkg: serializePackages([pkg])[0] }, // Pass package data as props
     };
 }
