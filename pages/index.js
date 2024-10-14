@@ -3,7 +3,7 @@ import PackageCard from "@/components/PackageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import connectDb, { serializePackages } from "@/lib/mongoose";
-import Head from "next/head";
+import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
@@ -11,11 +11,10 @@ import Package from "@/models/Package";
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
     <>
-      <Head>
-        <title>Al Habib Travel</title>
-        <meta name="description" content="Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK" />
-        <meta property="og:image" content="https://al-habib-travels-next-app.vercel.app/img/ogimage1.png" />
-      </Head>
+      <Head 
+        title={"Al Habib Travels"}
+        desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
+      />
       <header className="min-h-screen flex flex-col">
         <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">
           <p className="text-white text-center text-xs xs:text-sm">Welcome to Al Habib Travels | Your Trusted Hajj and Umrah Partner</p>

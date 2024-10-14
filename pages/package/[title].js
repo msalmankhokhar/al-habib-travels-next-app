@@ -10,12 +10,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faCreditCard, faPlane, faVanShuttle } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
+import Head from "@/components/Head";
 
 export default function PackageDetail({ pkg }) {
     const router = useRouter()
     const pkgTitle = router.query.title
     return (
         <>
+            <Head
+                title={`${pkg.title} | Al Habib Travel`}
+                desc={`Al Habib Travel is offering ${pkg.nights}-night, ${pkg.rating}-star Umrah packages, commonly referred to a "one-week Umrah Packages", at a highly competitive price of &euro; ${pkg.price}. These packages are ideal for budget-conscious pilgrims seeking a shorter Umrah experience. Accommodation is provided in ${pkg.rating}-star hotels, with ${pkg.makkahNights || defaultProps.madinahNights} nights at 
+                ${pkg.makkahHotel} in Mecca and ${pkg.madinahNights || defaultProps.madinahNights} nights at ${pkg.madinahHotel} in Madinah, in quad-sharing rooms. Umrah flights can be added to the package, but services such as Ziarats (tours), breakfast, and transport are not included and can be arranged separately if required.`}
+                imgSrc={pkg.imgSrc || defaultProps.imgSrc}
+            />
             <Navbar />
             <main className="px-5 pb-5">
                 <div className="flex gap-1 py-3 mb-3 text-xs text-teal-800 font-light">
