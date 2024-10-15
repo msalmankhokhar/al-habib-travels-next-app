@@ -23,7 +23,7 @@ export default function Navbar() {
                 </div>
                 <div className="sm:flex mb-1 gap-1 items-baseline leading-none font-bold md:text-xl text-lg brand-blue">
                     <div>AL HABIB</div>
-                    <div>TRAVEL</div>
+                    <div>TRAVEL.</div>
                 </div>
             </div>
             <ul className="md:flex gap-5 hidden items-center">
