@@ -54,7 +54,11 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-5">
                         <h1 className="text-bold font-bold brand-yellow text-sm">Office</h1>
-                        <p className="text-xs text-white">56 Abercairn Road,<br/>SW16 5AD London,<br/>United Kingdom.</p>
+                        <p className="text-xs text-white">Office 10378 182-184 High Street North East
+Ham
+London
+England
+E6 2JA</p>
                     </div>
                 </div>
             </div>
