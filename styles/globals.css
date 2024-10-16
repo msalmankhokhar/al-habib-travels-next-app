@@ -91,3 +91,7 @@
   opacity: 1;
   transform: translateX(20px);
 }
+
+#header-text-wrapper{
+  background-color: rgba(0, 0, 0, 0.37);
+}

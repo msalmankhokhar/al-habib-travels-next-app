@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
 import bgImg from '@/public/img/bg.png'
+import Link from "next/link";
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -16,7 +17,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         title={"Al Habib Travels"}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
-      <header className="min-h-screen relative flex flex-col">
+      <header className="relative flex flex-col">
         <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">
           <p className="text-white text-center text-xs xs:text-sm">Welcome to Al Habib Travels | Your Trusted Hajj and Umrah Partner</p>
         </div>
@@ -24,8 +25,12 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         <Navbar />
         <Image decoding="async" fill className="-z-50" objectFit="cover" objectPosition="center"alt="cover photo hajj" src={bgImg} placeholder="blur"/>
 
-        <div id="header-content" className="h-full flex-1 px-5 py-5 flex flex-col gap-5 items-center justify-center">
-          <p className="text-center tracking-wide leading-snug header-text font-bold text-5xl text-white">Let{"'"}s plan your Holy moments<br /> with our travel packages</p>
+        <div id="header-content" className="h-full flex-1 px-3 py-10 flex flex-col justify-center gap-5">
+          <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col gap-7">
+            <p className="tracking-wide header-text font-bold text-4xl text-white">Plan Your Sacred Journey With Our Exclusive Travel Packages</p>
+            <p className="tracking-wide header-text font-semibold text-sm text-white">Discover Our Tailored Umrah Packages and Begin Your Spiritual Experience Today</p>
+            <Link scroll={false} href={`#`} className="text-center w-min min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Book Now</Link>
+          </div>
         </div>
       </header>
       <main className="flex flex-col gap-24">
