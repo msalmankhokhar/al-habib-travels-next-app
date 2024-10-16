@@ -82,7 +82,7 @@ E6 2JA</p>
                     </div>
                 </div>
                 <div className="text-white text-xs">
-                    Copyright &copy; 2024 | alhabibtravel.co.uk
+                    Copyright &copy; 2024 | Al Habib Travel Ltd.
                 </div>
             </div>
             <div className="bg-white px-5 py-5">
