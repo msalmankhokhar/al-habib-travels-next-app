@@ -8,25 +8,26 @@ export default function Navbar() {
     const toggleMobileMenu = () => {
         document.getElementById('mobile-menu').classList.toggle('open')
     }
-    const openMobileMenu = () => {
-        document.getElementById('mobile-menu').classList.add('open')
-    }
     const closeMobileMenu = () => {
         document.getElementById('mobile-menu').classList.remove('open')
+    }
+    const openMobileMenu = () => {
+        const mobileMenu = document.getElementById('mobile-menu')
+        mobileMenu.classList.add('open')
     }
 
     return (
         <nav className="flex px-5 py-3 items-center justify-between bg-white">
             <div className="flex items-end gap-2">
                 <div>
-                    <Image src="/img/logos/logo.png" alt="al habib travel logo" width={55} height={55} />
+                    <Image src="/img/logos/logo.png" alt="al habib travel logo" width={65} height={55} />
                 </div>
                 <div className="sm:flex mb-1 gap-1 items-baseline leading-none font-bold md:text-xl text-lg brand-blue">
                     <div>AL HABIB</div>
                     <div>TRAVEL.</div>
                 </div>
             </div>
-            <ul className="md:flex gap-5 hidden items-center">
+            <ul className="gap-5 hidden items-center">
                 <li><Link className="text-sm" href="/">Home</Link></li>
                 <li><Link className="text-sm" href="#pkg-listing-section">Umrah Packages</Link></li>
                 <li><Link className="text-sm" href="#">Hajj Packages</Link></li>
@@ -34,17 +35,17 @@ export default function Navbar() {
                 <li><Link className="text-sm" href="#">Contact</Link></li>
                 <li><Link className="text-sm" href="#">About Us</Link></li>
             </ul>
-            <div id="mobile-menu" className="z-50 fixed md:hidden flex flex-col top-0 bottom-0 -left-3/4 transition-all duration-300 bg-white w-3/4">
+            <div id="mobile-menu" className="z-50 fixed flex flex-col top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3">
                 <ul className="flex flex-col mt-10">
-                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="/">Home</Link></li>
-                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="/#pkg-listing-section">Umrah Packages</Link></li>
-                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="#">Hajj Packages</Link></li>
-                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="#">Blog</Link></li>
-                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="#">Contact</Link></li>
-                    <li className="w-full border px-5 py-3"><Link className="text-sm" href="#">About Us</Link></li>
+                    <li className=""><Link className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/">Home</Link></li>
+                    <li className=""><Link className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/#pkg-listing-section">Umrah Packages</Link></li>
+                    <li className=""><Link className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Hajj Packages</Link></li>
+                    <li className=""><Link className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Blog</Link></li>
+                    <li className=""><Link className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Contact</Link></li>
+                    <li className=""><Link className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">About Us</Link></li>
                 </ul>
             </div>
-            <button type="button" onFocus={openMobileMenu}onBlur={closeMobileMenu} onClick={toggleMobileMenu} className="md:hidden block border rounded-md py-2 px-5">
+            <button tabIndex={0} type="button" onClick={toggleMobileMenu} onBlur={closeMobileMenu} className="block border rounded-md py-2 px-5">
                 <FontAwesomeIcon className="text-xl brand-blue" icon={faBars} />
             </button>
         </nav>

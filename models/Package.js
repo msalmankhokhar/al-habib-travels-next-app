@@ -14,4 +14,4 @@ const packageSchema = new mongoose.Schema({
   madinahNights: { type: Number, required: false },
 });
 
-export default mongoose.models.Package || mongoose.model('Package', packageSchema);
+export default mongoose.models?.Package || mongoose.model('Package', packageSchema);
