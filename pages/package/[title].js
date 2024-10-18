@@ -128,17 +128,58 @@ export default function PackageDetail({ pkg }) {
     );
 }
 
-export async function getServerSideProps(context) {
-    const { title } = context.query;
+// Server side rendering: Dont use it. Keep this function commented
+// export async function getServerSideProps(context) {
+//     const { title } = context.query;
+//     connectDb()
+//     const pkg = await Package.findOne({ title }).lean();
 
-    const pkg = await Package.findOne({ title }).lean();
+//     if (!pkg) {
+//         return {
+//             notFound: true,
+//         };
+//     }
+//     return {
+//         props: { pkg: serializePackages([pkg])[0] }, // Pass package data as props
+//     };
+// }
 
-    if (!pkg) {
+// Using static site generation instead of SSR:
+export async function getStaticProps({ params }) {
+    const { title } = params;
+    await connectDb(); // Connect to your database
+    try {
+        const pkg = await Package.findOne({ title }).lean();
+        if (!pkg) {
+            return {
+                notFound: true,
+            };
+        }
+
+        return {
+            props: { pkg: serializePackages([pkg])[0] }, // Pass package data as props
+        };
+    } catch (error) {
+        console.error('Error fetching package:', error);
         return {
             notFound: true,
         };
     }
-    return {
-        props: { pkg: serializePackages([pkg])[0] }, // Pass package data as props
-    };
+}
+
+export async function getStaticPaths() {
+    await connectDb(); // Connect to your database
+
+    try {
+        const allPackages = await Package.find().lean();
+        const paths = allPackages.map(pkg => ({ params: { title: pkg.title } }));
+
+        return { paths, fallback: false };
+    } catch (error) {
+        console.error('Error fetching packages:', error);
+        return {
+            paths: [],
+            fallback: false,
+        };
+    }
 }

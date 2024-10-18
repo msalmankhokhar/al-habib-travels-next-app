@@ -25,7 +25,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         <Navbar />
         <Image decoding="async" fill className="-z-50" objectFit="cover" objectPosition="center"alt="cover photo hajj" src={bgImg} placeholder="blur"/>
 
-        <div id="header-content" className="h-full flex-1 px-3 py-10 flex flex-col justify-center gap-5">
+        <div id="header-content" className="h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
           <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col gap-7">
             <p className="tracking-wide header-text font-bold text-4xl text-white">Plan Your Sacred Journey With Our Exclusive Travel Packages</p>
             <p className="tracking-wide header-text font-semibold text-sm text-white">Discover Our Tailored Umrah Packages and Begin Your Spiritual Experience Today</p>
@@ -151,8 +151,8 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
 }
 
 
-// Fetch packages with Server side rendering
-export async function getServerSideProps() {
+// Fetch packages with Static site generation
+export async function getStaticProps() {
   await connectDb();
   const packages = await Package.find({}).lean() // fetch all packages
   const popularPkgs = packages.filter(pkg => pkg.rating === 5);
@@ -167,3 +167,20 @@ export async function getServerSideProps() {
     },
   };
 }
+
+// Fetch packages with Server side rendering
+// export async function getServerSideProps() {
+//   await connectDb();
+//   const packages = await Package.find({}).lean() // fetch all packages
+//   const popularPkgs = packages.filter(pkg => pkg.rating === 5);
+//   const fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
+//   const threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
+
+//   return {
+//     props: {
+//       popularPkgs : serializePackages(popularPkgs),
+//       fourStarPkgs : serializePackages(fourStarPkgs),
+//       threeStarPkgs : serializePackages(threeStarPkgs)
+//     },
+//   };
+// }
