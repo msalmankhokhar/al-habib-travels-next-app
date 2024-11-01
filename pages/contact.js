@@ -11,6 +11,8 @@ import {
 import Testemonial from "@/components/Testemonial";
 import Footer from "@/components/Footer";
 import Faq from "@/components/Faq";
+import Reviews from "@/components/Sections/Reviews";
+import Faqs from "@/components/Sections/Faqs";
 
 export default function Contact() {
   return (
@@ -153,40 +155,9 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Reviews Section */}
-        <div className="py-24 px-4 md:px-5 lg:px-10 flex flex-col gap-5">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-center text-4xl leading-none font-extrabold brand-blue">
-              Customer Reviews
-            </h1>
-            <p className="text-base mb-5 text-center">
-              See what people say about us
-            </p>
-          </div>
-          {/* Reviews container */}
-          <div className="flex gap-5 justify-center flex-wrap items-center">
-            <Testemonial />
-            <Testemonial />
-            <Testemonial />
-          </div>
-        </div>
+        <Reviews/>
+        <Faqs />
 
-        <div className="py-24 items-center px-4 md:px-5 lg:px-10 flex flex-col gap-5">
-          <div className="flex mb-5 flex-col gap-3">
-            <h1 className="text-4xl leading-none font-extrabold brand-blue">
-              Frequently Asked Questions (FAQs)
-            </h1>
-          </div>
-          <div className="flex gap-10 lg:gap-20">
-            <div className="flex flex-col gap-5">
-              <Faq openState={true}/>
-              <Faq/>
-              <Faq/>
-              <Faq/>
-              <Faq/>
-            </div>
-          </div>
-        </div>
       </main>
 
       <Footer/>

@@ -9,6 +9,8 @@ import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
 import bgImg from '@/public/img/bg.png'
 import Link from "next/link";
+import Reviews from "@/components/Sections/Reviews";
+import Faqs from "@/components/Sections/Faqs";
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -144,6 +146,9 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           </div>
           <Image src={'/img/favBg.jpg'} width={550} height={550} className="rounded-md" alt="hajj crowd" />
         </div>
+
+        <Reviews padding={false}/>
+        <Faqs padding={false}/>
       </main>
       <Footer />
     </>
