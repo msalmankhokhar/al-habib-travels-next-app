@@ -29,7 +29,7 @@ export default function Contact() {
       <Navbar />
       
       <main>
-        <div className="py-20 flex flex-col gap-5 px-3 md:px-5 lg:px-10 bg-[#D4A10F0D]">
+        <div className="py-20 flex flex-col gap-5 w-screen px-3 md:px-5 lg:px-10 bg-[#D4A10F0D]">
           <div className="flex flex-col gap-3">
             <h1 className="text-center text-4xl leading-none font-extrabold brand-blue">
               Contact Us
@@ -43,19 +43,19 @@ export default function Contact() {
             {/* contact cards wrapper */}
             <div className="flex flex-col gap-5">
               <ContactCard
-                icon={faPhone}
+                imgName={'phone.png'}
                 contactNo={"0203 504 2344"}
                 contactMethod={"Call Now"}
                 responseTime={"1 Min"}
               />
               <ContactCard
-                icon={faWhatsapp}
+                imgName={'whatsapp.png'}
                 contactNo={"+44203 504 2344"}
                 contactMethod={"WhatsApp"}
                 responseTime={"1 Min"}
               />
               <ContactCard
-                icon={faEnvelope}
+                imgName={'mail.png'}
                 contactNo={"info@alhabibtravel.co.uk"}
                 contactMethod={"Email"}
                 responseTime={"1 Hour"}
@@ -154,7 +154,7 @@ export default function Contact() {
         </div>
 
         {/* Reviews Section */}
-        <div className="py-24 px-3 md:px-5 lg:px-10 flex flex-col gap-5">
+        <div className="py-24 px-4 md:px-5 lg:px-10 flex flex-col gap-5">
           <div className="flex flex-col gap-3">
             <h1 className="text-center text-4xl leading-none font-extrabold brand-blue">
               Customer Reviews
@@ -171,7 +171,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="py-24 px-3 md:px-5 lg:px-10 flex flex-col gap-5">
+        <div className="py-24 items-center px-4 md:px-5 lg:px-10 flex flex-col gap-5">
           <div className="flex mb-5 flex-col gap-3">
             <h1 className="text-4xl leading-none font-extrabold brand-blue">
               Frequently Asked Questions (FAQs)
