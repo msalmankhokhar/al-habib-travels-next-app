@@ -23,7 +23,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         </div>
 
         <Navbar />
-        <Image decoding="async" fill className="-z-50" objectFit="cover" objectPosition="center"alt="cover photo hajj" src={bgImg} placeholder="blur"/>
+        <Image decoding="async" fill className="-z-50" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/>
 
         <div id="header-content" className="h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
           <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col gap-7">
