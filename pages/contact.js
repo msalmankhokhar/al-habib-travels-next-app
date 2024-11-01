@@ -7,11 +7,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
-  faBars,
-  faGreaterThan,
 } from "@fortawesome/free-solid-svg-icons";
-import Rating from "@/components/Rating";
-import Image from "next/image";
 import Testemonial from "@/components/Testemonial";
 import Footer from "@/components/Footer";
 import Faq from "@/components/Faq";
@@ -31,7 +27,7 @@ export default function Contact() {
         </p>
       </div>
       <Navbar />
-      {/* Changed div to main for better SEO */}
+      
       <main>
         <div className="py-20 flex flex-col gap-5 px-3 md:px-5 lg:px-10 bg-[#D4A10F0D]">
           <div className="flex flex-col gap-3">
@@ -39,7 +35,7 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-base mb-5 text-center">
-              You're welcome to contact us using the contact details listed
+              You{`'`}re welcome to contact us using the contact details listed
               below
             </p>
           </div>
@@ -173,8 +169,6 @@ export default function Contact() {
             <Testemonial />
             <Testemonial />
           </div>
-          {/* View More button for testemonials */}
-          {/* <button type="button" className="mt-5 self-center min-w-36 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">View More</button> */}
         </div>
 
         <div className="py-24 px-3 md:px-5 lg:px-10 flex flex-col gap-5">
@@ -184,11 +178,6 @@ export default function Contact() {
             </h1>
           </div>
           <div className="flex gap-10 lg:gap-20">
-            {/* speaker image */}
-            {/* <div>
-              <Image alt="speaker" src={'/img/speaker.png'} width={270} height={270}/>
-            </div> */}
-            {/* faqs container */}
             <div className="flex flex-col gap-5">
               <Faq openState={true}/>
               <Faq/>
