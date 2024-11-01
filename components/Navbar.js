@@ -35,7 +35,7 @@ export default function Navbar() {
                 <li><Link className="text-sm" href="#pkg-listing-section">Umrah Packages</Link></li>
                 <li><Link className="text-sm" href="#">Hajj Packages</Link></li>
                 <li><Link className="text-sm" href="#">Blog</Link></li>
-                <li><Link className="text-sm" href="#">Contact</Link></li>
+                <li><Link className="text-sm" href="/contact">Contact</Link></li>
                 <li><Link className="text-sm" href="#">About Us</Link></li>
             </ul>
             <div id="mobile-menu" className="z-50 fixed flex flex-col top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3">
@@ -44,7 +44,7 @@ export default function Navbar() {
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/#pkg-listing-section">Umrah Packages</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Hajj Packages</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Blog</Link></li>
-                    <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Contact</Link></li>
+                    <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/contact">Contact</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">About Us</Link></li>
                 </ul>
             </div>
