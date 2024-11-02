@@ -20,9 +20,7 @@ export default function App({ Component, pageProps }) {
           font-family: ${font.style.fontFamily};
         }
       `}</style>
-    <PagesTopLoader 
-      showSpinner={true}
-    />
+    <PagesTopLoader />
     <Component {...pageProps} />
   </>
 }
