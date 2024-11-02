@@ -33,7 +33,7 @@ export default function Navbar() {
             <ul className="gap-5 hidden items-center">
                 <li><Link className="text-sm" href="/">Home</Link></li>
                 <li><Link className="text-sm" href="#pkg-listing-section">Umrah Packages</Link></li>
-                <li><Link className="text-sm" href="#">Hajj Packages</Link></li>
+                <li><Link className="text-sm" href="/ramadam-umrah-packages">Ramadan Packages</Link></li>
                 <li><Link className="text-sm" href="#">Blog</Link></li>
                 <li><Link className="text-sm" href="/contact">Contact</Link></li>
                 <li><Link className="text-sm" href="#">About Us</Link></li>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 <ul className="flex flex-col mt-10">
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/">Home</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/#pkg-listing-section">Umrah Packages</Link></li>
-                    <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Hajj Packages</Link></li>
+                    <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/ramadam-umrah-packages">Ramadan Packages</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">Blog</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/contact">Contact</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="#">About Us</Link></li>

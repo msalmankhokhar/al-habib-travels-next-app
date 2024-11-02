@@ -7,10 +7,12 @@ import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
-import bgImg from '@/public/img/bg.png'
+import bgImg from '@/public/img/bg2.png'
 import Link from "next/link";
 import Reviews from "@/components/Sections/Reviews";
 import Faqs from "@/components/Sections/Faqs";
+import Partners from "@/components/Sections/Partners";
+import SpecialOffer from "@/components/Sections/SpecialOffer";
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -31,7 +33,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col gap-7">
             <p className="tracking-wide header-text font-bold text-4xl text-white">Plan Your Sacred Journey With Our Exclusive Travel Packages</p>
             <p className="tracking-wide header-text font-semibold text-sm text-white">Discover Our Tailored Umrah Packages and Begin Your Spiritual Experience Today</p>
-            <Link scroll={false} href={`#`} className="text-center w-min min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Book Now</Link>
+            <Link scroll={false} href={`/#pkg-listing-section`} className="text-center w-min min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Book Now</Link>
           </div>
         </div>
       </header>
@@ -135,20 +137,11 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           {/* <button type="button" className="min-w-36 w-min border bg-gray-100 hover:bg-white transition-colors duration-300 text-sm p-3 rounded-full">Load More</button> */}
         </div>
 
-        <div id="special-offer-section" className="bg-pattern px-5 py-16 flex flex-col items-center lg:flex-row gap-5 justify-around bg-teal-900">
-          <div className="flex flex-col gap-5 max-w-screen-sm w-full">
-            <h1 className="font-bold text-3xl text-white">Special Offers</h1>
-            <h2 className="font-bold brand-yellow text-xl">{`"Unlock special offers on your Hajj and Umrah Journey"`}</h2>
-            <p className="text-white">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita eaque optio labore temporibus. Aperiam dolorem molestiae nihil officiis error dolor. Nobis ea qui assumenda quisquam facere perspiciatis ab, commodi veritatis aperiam molestias vel quia voluptate fugiat voluptatem excepturi! Dolores, quibusdam! Nobis vel dolores excepturi qui quisquam aperiam at distinctio, eaque unde alias aliquam omnis minus fuga.
-            </p>
-            <button type="button" className="font-semibold min-w-36 w-min bg-white text-teal-900 hover:text-teal-700 transition-colors duration-300 text-sm p-3 rounded-full">Book Now</button>
-          </div>
-          <Image src={'/img/favBg.jpg'} width={550} height={550} className="rounded-md" alt="hajj crowd" />
-        </div>
+        <SpecialOffer/>
 
         <Reviews padding={false}/>
         <Faqs padding={false}/>
+        <Partners />
       </main>
       <Footer />
     </>
