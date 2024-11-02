@@ -33,7 +33,7 @@ export default function Contact() {
       <main>
         <div className="py-20 flex flex-col gap-5 w-screen px-3 md:px-5 lg:px-10 bg-[#D4A10F0D]">
           <div className="flex flex-col gap-3">
-            <h1 className="text-center text-4xl leading-none font-extrabold brand-blue">
+            <h1 id="contact-us-h" className="text-center text-4xl leading-none font-extrabold brand-blue">
               Contact Us
             </h1>
             <p className="text-base mb-5 text-center">
@@ -64,7 +64,7 @@ export default function Contact() {
               />
             </div>
             {/* Query / Contact Form */}
-            <form className="bg-white relative px-5 sm:px-10 py-10 rounded-xl border-[1.4px] border-amber-400 w-full max-w-xl flex flex-col gap-3">
+            <form id="contact-query-form" className="bg-white relative px-5 sm:px-10 py-10 rounded-xl border-[1.4px] border-amber-400 w-full max-w-xl flex flex-col gap-3">
               <h1 className="font-bold brand-yellow text-4xl">We are here to assist you!</h1>
               <p className="font-semibold text-base">Here is a form you need to fill out. We will get back to you when it works best for us.</p>
               <div className="flex flex-col gap-2 w-full">
@@ -155,7 +155,6 @@ export default function Contact() {
           </div>
         </div>
 
-        <Reviews/>
         <Faqs />
 
       </main>

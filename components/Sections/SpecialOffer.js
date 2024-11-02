@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function SpecialOffer() {
     return (
@@ -9,7 +10,7 @@ export default function SpecialOffer() {
                 <p className="text-white">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita eaque optio labore temporibus. Aperiam dolorem molestiae nihil officiis error dolor. Nobis ea qui assumenda quisquam facere perspiciatis ab, commodi veritatis aperiam molestias vel quia voluptate fugiat voluptatem excepturi! Dolores, quibusdam! Nobis vel dolores excepturi qui quisquam aperiam at distinctio, eaque unde alias aliquam omnis minus fuga.
                 </p>
-                <button type="button" className="font-semibold min-w-36 w-min bg-white text-teal-900 hover:text-teal-700 transition-colors duration-300 text-sm p-3 rounded-full">Book Now</button>
+                <Link href={'/contact'} type="button" className="text-center font-semibold min-w-36 w-min bg-white text-teal-900 hover:text-teal-700 transition-colors duration-300 text-sm p-3 rounded-full">Book Now</Link>
             </div>
             <div className="relative">
                 <Image src={'/img/favBg.jpg'} width={620} height={620} alt="hajj crowd" />
