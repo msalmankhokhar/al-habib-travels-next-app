@@ -38,7 +38,7 @@ export default function Footer() {
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Travel Insurance</Link></li>
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Terms and Conditions</Link></li>
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Safi Assurance</Link></li>
-                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Privacy Policy Statement</Link></li>
+                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'/privacy-policy'}>Privacy Policy Statement</Link></li>
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Payment Security</Link></li>
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Our Responsibility</Link></li>
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Download</Link></li>

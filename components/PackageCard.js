@@ -25,7 +25,7 @@ export default function PackageCard({ title, imgSrc, imgSrcCustom, price, rating
         <Image layout="fill" objectFit="cover" objectPosition="center" src={imgSrcCustom || imgSrc || defaultProps.imgSrc} alt="Package card cover photo" />
         <div className="absolute top-0 right-0 p-2 px-5 w-32 rounded-es-lg text-white flex flex-col bg-teal-800">
           <div className="font-light tracking-wider text-xs">Price</div>
-          <div className="font-bold text-lg">&euro; <span className="text-2xl">{price}</span></div>
+          <div className="font-bold text-lg">&pound; <span className="text-2xl">{price}</span></div>
         </div>
       </div>
       <div className="py-3 px-3 flex flex-col gap-3">

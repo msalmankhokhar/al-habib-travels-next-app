@@ -17,6 +17,11 @@ export default function Reviews({padding=true}) {
             <Testemonial />
             <Testemonial />
           </div>
+
+          <div className="flex gap-5 flex-wrap items-center justify-center">
+            <iframe width="450" className='aspect-video overflow-hidden rounded-lg' src="https://www.youtube.com/embed/kbM21fHGPfM?si=e182MMKsB-tVWEki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="450" className='aspect-video overflow-hidden rounded-lg' src="https://www.youtube.com/embed/ds3dasE-_1s?si=lqzNyuweJIKOWNbm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </div>
     )
 }

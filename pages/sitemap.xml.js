@@ -8,6 +8,18 @@ function generateSiteMap(packages) {
      <url>
        <loc>${BASE_URL}</loc>
      </url>
+     <url>
+       <loc>${BASE_URL}/contact</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/about</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/privacy-policy</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/ramadan-umrah-packages</loc>
+     </url>
      ${
         packages.map((pkg) => {
             return `

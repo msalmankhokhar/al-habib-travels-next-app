@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <>
       <Head
-        title={"Contact Us - Al Habib Travel"}
+        title={"Contact Us | Al Habib Travel Ltd."}
         desc={
           "Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"
         }
@@ -155,6 +155,7 @@ export default function Contact() {
           </div>
         </div>
 
+        <Reviews />
         <Faqs />
 
       </main>

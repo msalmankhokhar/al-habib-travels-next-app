@@ -18,7 +18,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
     <>
       <Head 
-        title={"Al Habib Travels"}
+        title={"Al Habib Travel Ltd."}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
       <header className="relative flex flex-col">
