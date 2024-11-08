@@ -42,7 +42,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         <div id="query-form-section" className="pt-16 px-3 flex flex-col justify-center items-center gap-5">      
           <h1 className="font-bold brand-blue text-3xl">Package Customization Form</h1>
           <p className="text-gray-500">Fill your travel requirements below. Our team will get back to you</p>
-          <form className="bg-pattern bg-teal-900 relative px-5 sm:px-10 py-10 rounded-xl border mt-5 w-full max-w-screen-lg flex flex-col gap-3">
+          <form className="bg-pattern bg-[#a98625] relative px-5 sm:px-10 py-10 rounded-xl border mt-5 w-full max-w-screen-lg flex flex-col gap-3">
             <div className="w-full flex flex-col sm:flex-row gap-3">
               <div className="flex flex-col gap-2 w-full">
                 <label htmlFor="name-input" className="text-sm text-white">Your Full Name*</label>

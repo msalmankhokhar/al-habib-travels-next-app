@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Poppins as Font } from "next/font/google";
+import { Work_Sans as Font } from "next/font/google";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import useScrollRestoration from "@/hooks/useScrollRestroration";

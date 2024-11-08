@@ -14,10 +14,12 @@ export default function Faq({q=defaultProps.q, ans=defaultProps.ans, openState=f
     }
 
     return (
-        <div className="flex flex-col gap-3 border p-3 sm:p-5 rounded-lg">
+        <div className="flex flex-col gap-3 border-b p-3 sm:p-5 rounded-lg">
             <div className="flex gap-5 items-center">
                 <h2 className="font-semibold text-base sm:text-lg">{q}</h2>
-                <button onClick={toggleFaq} type="button" className="bg-teal-900 transition-colors flex items-center justify-center min-w-[1.7rem] h-7 duration-300 text-lg rounded-full text-white">{open ? '-' : '+'}</button>
+                <button onClick={toggleFaq} type="button" className="bg-teal-900 leading-none transition-colors flex items-center justify-center w-7 h-7 duration-300 text-lg rounded-full text-white">
+                    {open ? '-' : '+'}
+                </button>
             </div>
             <p className={`${!open ? 'hidden' : ''} text-sm sm:text-base font-light max-w-2xl`}>
                 {ans}

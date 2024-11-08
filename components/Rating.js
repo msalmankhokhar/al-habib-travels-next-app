@@ -15,7 +15,7 @@ export default function Rating({ value }) {
         return [...filledStars, ...emptyStars];
       };
     return (
-        <div className="flex gap-1">
+        <div className="flex justify-center gap-1">
           {renderStars(value)}
         </div>
     )

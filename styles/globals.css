@@ -54,6 +54,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-blend-mode: multiply;
+}
+.bg-pattern-dark{
+  background-image: url(/img/bg-vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-color: #00454a;
   background-blend-mode: multiply;
 }
