@@ -20,7 +20,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="border-b  flex py-3 px-5 md:px-7 lg:px-12 items-center justify-between bg-white">
+        <nav className="border-b z-20 flex py-3 px-5 md:px-7 lg:px-12 items-center justify-between bg-white">
             <div className="flex items-end gap-2">
                 <div>
                     <Image src="/img/logos/logo.png" alt="al habib travel logo" width={65} height={55} />
@@ -39,13 +39,13 @@ export default function Navbar() {
                 <li><Link className="text-sm" href="/contact">Contact</Link></li>
                 <li><Link className="text-sm" href="/about">About Us</Link></li>
             </ul>
-            <div id="mobile-menu" className="z-50 fixed flex flex-col justify-center top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3">
+            <div id="mobile-menu" className="z-[1000] fixed flex flex-col justify-center top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3">
                 <ul className="flex flex-col mt-10">
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/">Home</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/#pkg-listing-section">Umrah Packages</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/ramadam-umrah-packages">Ramadan Packages</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/makkah-hotels">Makkah Hotels</Link></li>
-                    {/* <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/madinah-hotels">Madinah Hotels</Link></li> */}
+                    <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/madinah-hotels">Madinah Hotels</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/contact">Contact</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/about">About Us</Link></li>
                 </ul>

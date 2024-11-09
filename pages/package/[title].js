@@ -19,12 +19,12 @@ export default function PackageDetail({ pkg }) {
         <>
             <Head
                 title={`${pkg.title} | Al Habib Travel`}
-                desc={`Al Habib Travel is offering ${pkg.nights}-night, ${pkg.rating}-star Umrah packages, commonly referred to a "one-week Umrah Packages", at a highly competitive price of &euro; ${pkg.price}. These packages are ideal for budget-conscious pilgrims seeking a shorter Umrah experience. Accommodation is provided in ${pkg.rating}-star hotels, with ${pkg.makkahNights || defaultProps.madinahNights} nights at 
+                desc={`Al Habib Travel is offering ${pkg.nights}-night, ${pkg.rating}-star Umrah packages, commonly referred to a "one-week Umrah Packages", at a highly competitive price of &pound; ${pkg.price}. These packages are ideal for budget-conscious pilgrims seeking a shorter Umrah experience. Accommodation is provided in ${pkg.rating}-star hotels, with ${pkg.makkahNights || defaultProps.madinahNights} nights at 
                 ${pkg.makkahHotel} in Mecca and ${pkg.madinahNights || defaultProps.madinahNights} nights at ${pkg.madinahHotel} in Madinah, in quad-sharing rooms. Umrah flights can be added to the package, but services such as Ziarats (tours), breakfast, and transport are not included and can be arranged separately if required.`}
                 imgSrc={pkg.imgSrc || defaultProps.imgSrc}
             />
             <Navbar />
-            <main className="px-5 pb-5">
+            <main className="px-5 pb-5 max-w-screen-xl mx-auto">
                 <div className="flex gap-1 py-3 mb-3 text-xs text-teal-800 font-light">
                     <Link href="/" scroll={true}>Home</Link>
                     <span>{`>`}</span>
@@ -40,7 +40,7 @@ export default function PackageDetail({ pkg }) {
                             <div className="flex items-baseline gap-3">
                                 <h2 className="font-bold text-lg leading-none">Price</h2>
                                 <div className="flex items-end gap-1 leading-none text-3xl text-teal-800 brand-blue font-bold">
-                                    <span>&euro;</span>
+                                    <span>&pound;</span>
                                     <span> {pkg.price}</span>
                                 </div>
                             </div>
