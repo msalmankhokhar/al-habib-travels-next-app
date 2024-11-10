@@ -1,8 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faPhone } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactCardNav from './ContactCardNav'
 
 export default function Navbar() {
     const toggleMobileMenu = () => {
@@ -39,8 +40,11 @@ export default function Navbar() {
                 <li><Link className="text-sm" href="/contact">Contact</Link></li>
                 <li><Link className="text-sm" href="/about">About Us</Link></li>
             </ul>
-            <div id="mobile-menu" className="z-[1000] fixed flex flex-col justify-center top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3">
-                <ul className="flex flex-col mt-10">
+            <div id="mobile-menu" className="z-[1000] fixed flex flex-col py-5 gap-5 top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3">
+                <div className='px-5'>
+                    <Image src="/img/logos/logo.png" alt="al habib travel logo" width={65} height={55} />
+                </div>
+                <ul className="flex flex-col">
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/">Home</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/#pkg-listing-section">Umrah Packages</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/ramadam-umrah-packages">Ramadan Packages</Link></li>
@@ -49,10 +53,30 @@ export default function Navbar() {
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/contact">Contact</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/about">About Us</Link></li>
                 </ul>
+                <ContactCardNav customClass='block md:hidden px-5'/>
+                <ContactCardNav
+                    customClass='block md:hidden px-5'
+                    title='Call Us Now'
+                    value='0203 504 2344'
+                    link='tel:0203 504 2344'
+                    icon={faPhone}
+                    color='brand-yellow'
+                />
             </div>
-            <button type="button" onClick={toggleMobileMenu} className="block border rounded-md py-2 px-5">
-                <FontAwesomeIcon className="text-xl brand-blue" icon={faBars} />
-            </button>
+            <div className="flex items-center gap-5">
+                <ContactCardNav customClass='hidden md:block'/>
+                <ContactCardNav
+                    customClass='hidden md:block'
+                    title='Call Us Now'
+                    value='0203 504 2344'
+                    link='tel:0203 504 2344'
+                    icon={faPhone}
+                    color='brand-yellow'
+                />
+                <button type="button" onClick={toggleMobileMenu} className="block border rounded-md py-2 px-5">
+                    <FontAwesomeIcon className="text-xl brand-blue" icon={faBars} />
+                </button>
+            </div>
         </nav>
     )
 }
