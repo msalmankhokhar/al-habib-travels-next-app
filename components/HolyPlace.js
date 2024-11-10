@@ -1,10 +1,10 @@
 import Image from "next/image"
 
-export default function HolyPlace({name="Jabbal Al Makkah", desc, city="makkah"}) {
+export default function HolyPlace({name="Jabbal Al Makkah", desc, city="makkah", folder="holyplaces"}) {
     return (
         <div className="flex justify-center rounded-lg gap-4 flex-wrap w-fit mx-auto">
             <div className="rounded-md overflow-hidden relative h-[250px] w-full min-[1014px]:w-[400px] min-[1014px]:min-h-[250px]">
-                <Image src={`/img/holyplaces/${city}/${name}.png`} fill style={{ objectFit: 'cover', objectPosition: 'center' }} alt={name} />
+                <Image src={`/img/${folder}/${city}/${name}.png`} fill style={{ objectFit: 'cover', objectPosition: 'center' }} alt={name} />
             </div>
             <div className="text-sm max-w-lg flex justify-center flex-col gap-3">
                 <h2 className="self-start leading-none text-xl md:text-2xl font-bold brand-blue text-center">{name}</h2>

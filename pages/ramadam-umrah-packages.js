@@ -19,7 +19,7 @@ import SpecialOffer from "@/components/Sections/SpecialOffer";
 export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
     <>
-      <Head 
+      <Head
         title={"Al Habib Travels"}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
@@ -31,7 +31,7 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
         <Navbar />
 
         <div id="header-content" className="max-w-screen-xl mx-auto w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5">
-            <Image decoding="async" fill objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/>
+          <Image decoding="async" fill objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur" />
         </div>
       </header>
       <main className="flex flex-col gap-24">
@@ -40,8 +40,8 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
           <h1 className="font-bold brand-blue text-center text-3xl max-w-2xl">Popular Ramadan Packages</h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
             {
-              popularPkgs.length > 0 ? popularPkgs.map((pkg)=>{
-                return <PackageCard imgSrcCustom={'/img/ramadan-pkg-card.png'} key={pkg.title} {...pkg}/>
+              popularPkgs.length > 0 ? popularPkgs.map((pkg) => {
+                return <PackageCard imgSrcCustom={'/img/pkgs/ramadan.png'} key={pkg.title} {...pkg} />
               }) : (<p className="text-red-500 font-black">No Packages found</p>)
             }
           </div>
@@ -51,9 +51,9 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
         <div id="four-star-section" className="px-5 flex flex-col justify-center items-center gap-5">
           <h1 className="font-bold brand-blue text-3xl text-center">4 Star Ramadan Packages</h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
-          {
-              fourStarPkgs.length > 0 ? fourStarPkgs.map((pkg)=>{
-                return <PackageCard imgSrcCustom={'/img/ramadan-pkg-card.png'} key={pkg.title} {... pkg}/>
+            {
+              fourStarPkgs.length > 0 ? fourStarPkgs.map((pkg) => {
+                return <PackageCard imgSrcCustom={'/img/pkgs/ramadan.png'} key={pkg.title} {...pkg} />
               }) : (<p className="text-red-500 font-black">No Packages found</p>)
             }
           </div>
@@ -63,9 +63,9 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
         <div id="three-star-section" className="px-5 flex flex-col justify-center items-center gap-5">
           <h1 className="font-bold text-center brand-blue text-3xl">3 Star Ramadan Packages</h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
-          {
-              threeStarPkgs.length > 0 ? threeStarPkgs.map((pkg)=>{
-                return <PackageCard imgSrcCustom={'/img/ramadan-pkg-card.png'} key={pkg.title} {... pkg}/>
+            {
+              threeStarPkgs.length > 0 ? threeStarPkgs.map((pkg) => {
+                return <PackageCard imgSrcCustom={'/img/pkgs/ramadan.png'} key={pkg.title} {...pkg} />
               }) : (<p className="text-red-500 font-black">No Packages found</p>)
             }
           </div>
@@ -86,23 +86,24 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
         </div>
 
         <div className="px-3 py-10 bg-pattern-light flex flex-col gap-3 items-center">
-            <h1 className="text-3xl font-bold text-center text-black">Ready for your Journey?</h1>
-            <p className="text-sm sm:flex-row sm:text-base text-center flex-wrap items-center gap-2 flex flex-col text-white font-semibold">
-                <span>Call Us now at</span>
-                <div className="bg-brand-blue p-1 rounded-full flex gap-1.5 items-center">
-                    <div className="rounded-full h-9 w-9 flex items-center justify-center bg-white">
-                        <FontAwesomeIcon className="text-black" icon={faPhone}/>
-                    </div>
-                    <span className="mr-4 ml-1 text-sm font-semibold">0203 504 2344</span>
-                </div>
-                <span>To plan your perfect Umrah Package</span>
-            </p>
+          <h1 className="text-3xl font-bold text-center text-black">Ready for your Journey?</h1>
+          <div className="text-sm sm:flex-row sm:text-base text-center flex-wrap items-center gap-2 flex flex-col text-white font-semibold">
+            <span>Call Us now at</span>
+            <div className="bg-brand-blue p-1 rounded-full flex gap-1.5 items-center">
+              <div className="rounded-full h-9 w-9 flex items-center justify-center bg-white">
+                <FontAwesomeIcon className="text-black" icon={faPhone} />
+              </div>
+              <span className="mr-4 ml-1 text-sm font-semibold">0203 504 2344</span>
+            </div>
+            <span>To plan your perfect Umrah Package</span>
+          </div>
         </div>
+
 
         <SpecialOffer />
 
-        <Reviews padding={false}/>
-        <Faqs padding={false}/>
+        <Reviews padding={false} />
+        <Faqs padding={false} />
         <Partners />
       </main>
       <Footer />
@@ -114,16 +115,16 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
 // Fetch packages with Static site generation
 export async function getStaticProps() {
   await connectDb();
-  const packages = await Package.find({}).lean() // fetch all packages
+  const packages = await Package.find({type: "Ramadan"}).lean() // fetch all packages
   const popularPkgs = packages.filter(pkg => pkg.rating === 5);
   const fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
   const threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
 
   return {
     props: {
-      popularPkgs : serializePackages(popularPkgs),
-      fourStarPkgs : serializePackages(fourStarPkgs),
-      threeStarPkgs : serializePackages(threeStarPkgs)
+      popularPkgs: serializePackages(popularPkgs),
+      fourStarPkgs: serializePackages(fourStarPkgs),
+      threeStarPkgs: serializePackages(threeStarPkgs)
     },
   };
 }
