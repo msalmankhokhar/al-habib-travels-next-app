@@ -7,7 +7,7 @@ import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
-import bgImg from '@/public/img/bg2.png'
+import bgImg from '@/public/img/posters/2.jpg'
 import Link from "next/link";
 import Reviews from "@/components/Sections/Reviews";
 import Faqs from "@/components/Sections/Faqs";
@@ -23,18 +23,21 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         title={"Al Habib Travel Ltd."}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
-      <header className="relative flex flex-col bg-pattern-dark">
+      <header className="relative flex flex-col bg-gray-200">
         <TopBanner />
         <Navbar />
-        <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/>
+        {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
+        <div id="header-content" className="max-w-screen-lg mx-auto w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5">
+          <Image decoding="async" fill objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur" />
+        </div>
 
-        <div id="header-content" className="z-10 h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
+        {/* <div id="header-content" className="z-10 h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
           <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col gap-7">
             <p className="tracking-wide header-text font-bold text-4xl text-white">Plan Your Sacred Journey With Our Exclusive Travel Packages</p>
             <p className="tracking-wide header-text font-semibold text-sm text-white">Discover Our Tailored Umrah Packages and Begin Your Spiritual Experience Today</p>
             <Link scroll={false} href={`/#pkg-listing-section`} className="text-center w-min min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Book Now</Link>
           </div>
-        </div>
+        </div> */}
 
       </header>
       <main className="flex flex-col gap-24">

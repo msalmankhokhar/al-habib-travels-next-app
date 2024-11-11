@@ -23,7 +23,7 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
         title={"Al Habib Travels"}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
-      <header className="relative flex flex-col bg-pattern-light mb-16">
+      <header className="relative flex flex-col bg-gray-200 mb-16">
         <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">
           <p className="text-white text-center text-xs xs:text-sm">Welcome to Al Habib Travels | Your Trusted Hajj and Umrah Partner</p>
         </div>
@@ -31,7 +31,7 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
         <Navbar />
 
         <div id="header-content" className="max-w-screen-xl mx-auto w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5">
-          <Image decoding="async" fill objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur" />
+          <Image className="" decoding="async" fill objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur" />
         </div>
       </header>
       <main className="flex flex-col gap-24">
