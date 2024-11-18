@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Confirmation - Al HabibTravel</title>
+  <style>
+    /* General Email Styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-spacing: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h1, h2 {
+      color: #00454A;
+      color: #D4A10F;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .header {
+      /* background-color: #007bff; */
+      padding: 20px;
+      text-align: center;
+    }
+    .footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+    }
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .content {
+      padding: 20px;
+    }
+    .content table {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .content td {
+      padding: 5px;
+    }
+    .header img {
+        width: 130px;
+      }
+    @media only screen and (max-width: 600px) {
+      .content {
+        padding: 10px;
+      }
+      .header img {
+        width: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="header">
+        <img src="https://www.alhabibtravel.co.uk/img/logos/logo.png" alt="Al Habib Travel Logo">
+        <h1>Al Habib Travel Ltd</h1>
+        <p>Trusted by Pilgrims, Loved by Families - From Heart to Haram</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="content">
+        <h2>Hello <%= name %>,</h2>
+        <p>Thank you for contacting <strong>Al Habib Travel</strong> regarding our Umrah booking services. We have successfully received your query and our team will get in touch with you shortly.</p>
+        <!-- <p>Here are the details of your inquiry:</p> -->
+        <!-- <table>
+          <tr>
+            <td><strong>Name:</strong></td>
+            <td>{{name}}</td>
+          </tr>
+          <tr>
+            <td><strong>Email:</strong></td>
+            <td>{{email}}</td>
+          </tr>
+          <tr>
+            <td><strong>Phone Number:</strong></td>
+            <td>{{phone}}</td>
+          </tr>
+          <tr>
+            <td><strong>Number of Passengers:</strong></td>
+            <td>{{passengers}}</td>
+          </tr>
+          <tr>
+            <td><strong>Departure Airport:</strong></td>
+            <td>{{departureAirport}}</td>
+          </tr>
+          <tr>
+            <td><strong>Month of Departure:</strong></td>
+            <td>{{departureMonth}}</td>
+          </tr>
+        </table> -->
+        <p>We will reach out to you soon with further information.</p>
+        <p>If you have any questions, feel free to reply to this email.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer">
+        <p>Thank you for choosing <strong>Al Habib Travel</strong></p>
+        <p><a target="_blank" href="https://www.alhabibtravel.co.uk">Visit our website</a> for more information.</p>
+        <p>&copy; 2024 Al Habib Travel | All Rights Reserved</p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

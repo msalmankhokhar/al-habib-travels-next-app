@@ -54,6 +54,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-blend-mode: multiply;
+}
+.bg-pattern-dark{
+  background-image: url(/img/bg-vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-color: #00454a;
   background-blend-mode: multiply;
 }
@@ -62,7 +69,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: #3c5702;
+  background-color: #D4A10F;
   background-blend-mode: multiply;
 }
 
@@ -77,6 +84,10 @@
 #special-offer-img-wrapper{
   width: 80vw;
   aspect-ratio: 1/1;
+}
+
+.holyplaces-container > div:nth-child(even){
+  flex-direction: row-reverse;
 }
 
 @media screen and (min-width: 1024) {
