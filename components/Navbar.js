@@ -37,6 +37,7 @@ export default function Navbar() {
                 <li><Link className="text-sm" href="/ramadam-umrah-packages">Ramadan Packages</Link></li>
                 <li><Link className="text-sm" href="/makkah-hotels">Makkah Hotels</Link></li>
                 <li><Link className="text-sm" href="/madinah-hotels">Makkah Hotels</Link></li>
+                <li><Link className="text-sm" href="/visa">Visa</Link></li>
                 <li><Link className="text-sm" href="/contact">Contact</Link></li>
                 <li><Link className="text-sm" href="/about">About Us</Link></li>
             </ul>
@@ -50,6 +51,7 @@ export default function Navbar() {
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/ramadam-umrah-packages">Ramadan Packages</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/makkah-hotels">Makkah Hotels</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/madinah-hotels">Madinah Hotels</Link></li>
+                    <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/visa">Visa</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/contact">Contact</Link></li>
                     <li className=""><Link onClick={handleLinkClick} className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700" href="/about">About Us</Link></li>
                 </ul>
