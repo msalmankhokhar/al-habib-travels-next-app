@@ -1,9 +1,8 @@
 import "@/styles/globals.css";
 import { Work_Sans as Font } from "next/font/google";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
 import useScrollRestoration from "@/hooks/useScrollRestroration";
 import { PagesTopLoader } from 'nextjs-toploader/pages'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const font = Font({
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -24,5 +23,6 @@ export default function App({ Component, pageProps }) {
     showSpinner={false}
     />
     <Component {...pageProps} />
+    <GoogleTagManager gtmId="GTM-KGQFSMNM" />
   </>
 }
