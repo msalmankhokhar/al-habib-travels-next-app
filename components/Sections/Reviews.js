@@ -19,7 +19,7 @@ export default function Reviews({padding=true}) {
               rating={5}
             />
             <Testemonial 
-              name={"Seibar Wakefield"}
+              name={"Abitha Ameen"}
               msg={"Ali Raza is really helpful in finding us the right package and the cheapest price. Even helped with a last minute date change as well and he sorted out our transport on the spot. Al Habib Travel is highly recommended company. will see you next year and also will refer your company to friends and family."}
               rating={5}
             />

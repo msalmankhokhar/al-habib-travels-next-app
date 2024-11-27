@@ -11,7 +11,7 @@ export default function about() {
                 desc={''}
             />
             <Navbar />
-            <main className='px-5 md:px-7 lg:px-12 py-10'>
+            <main className='px-5 md:px-7 lg:px-12 py-10 max-w-screen-lg mx-auto'>
 
                 <div>
                     <div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-        <footer className="bg-pattern-dark mt-10 flex flex-col">
+        <footer className="bg-pattern-dark flex flex-col">
 
             <div className="flex flex-col gap-5 px-5 pt-16 pb-5 md:flex-row md:justify-evenly flex-wrap">
 
@@ -25,11 +25,9 @@ export default function Footer() {
                     <ul className="flex flex-col gap-1">
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'/'}>Home</Link></li>
                         <li className="leading-none"><Link className="text-sm font-light text-white" href={'/#pkg-listing-section'}>Umrah Packages</Link></li>
-                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Hajj Packages</Link></li>
-                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Flights</Link></li>
-                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Blog</Link></li>
-                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>Contact</Link></li>
-                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'#'}>About us</Link></li>
+                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'/ramadam-umrah-packages'}>Ramadan Umrah Packages</Link></li>
+                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'/contact'}>Contact</Link></li>
+                        <li className="leading-none"><Link className="text-sm font-light text-white" href={'/about'}>About us</Link></li>
                     </ul>
                 </div>
                 <div className="flex flex-col gap-5">
@@ -69,15 +67,15 @@ export default function Footer() {
             </div>
             <div className="flex border-t flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-5">
                 <div className="flex gap-4 items-center">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
+                    <a target="_blank" href="#" className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
                         <FontAwesomeIcon icon={faFacebook} className="leading-none text-sm" />
-                    </div>
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
+                    </a>
+                    <a href="#" className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
                         <FontAwesomeIcon icon={faInstagram} className="leading-none text-sm" />
-                    </div>
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
+                    </a>
+                    <a href="https://www.youtube.com/@alhabibtraveluk" className="flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-teal-700 hover:text-gray-200 hover:bg-teal-800 transition-colors duration-300">
                         <FontAwesomeIcon icon={faYoutube} className="leading-none text-sm" />
-                    </div>
+                    </a>
                 </div>
                 <div className="text-white text-sm">
                     Copyright &copy; 2024 | Al Habib Travel Ltd.

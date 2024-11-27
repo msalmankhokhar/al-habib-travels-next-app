@@ -18,7 +18,7 @@ export const defaultProps = {
 }
 
 export default function PackageCard({ title, type, imgSrc, imgSrcCustom, price, rating, makkahHotel, madinahHotel, makkahNights, madinahNights }) {
-
+  const slug = title.replace(/ /g, "-")
   return (
     <div className="pkgcard border rounded-lg overflow-hidden w-full">
       <div className="imgHolder relative w-full">
@@ -60,7 +60,7 @@ export default function PackageCard({ title, type, imgSrc, imgSrcCustom, price, 
             <FontAwesomeIcon icon={faCheck} className="text-xs absolute right-10" />
           </div>
         </div>
-        <Link scroll={false} href={`/package/${title}`} className="text-center min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">View Details</Link>
+        <Link scroll={false} href={`/package/${slug}`} className="text-center min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">View Details</Link>
       </div>
     </div>
   )

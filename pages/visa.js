@@ -21,7 +21,7 @@ export default function visa() {
       />
       <TopBanner/>
       <Navbar />
-      <div className="container mx-auto">
+      <main className="container mx-auto max-w-screen-lg">
         <VisaForm />
         <VisaCards />
         <VisaSteps />
@@ -53,7 +53,7 @@ export default function visa() {
             </button>
           </div>
         </div>
-      </div>
+      </main>
       <Questions />
       <Insights />
       <Reviews />

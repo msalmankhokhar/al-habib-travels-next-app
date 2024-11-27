@@ -55,9 +55,9 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             <p className="text-gray-500">
               {`Visual guidance is easy to understand, making your journey smoother. We've uploaded Umrah content on Al Habib Travel's official YouTube channel to keep you updated with the latest Umrah Packages. You'll also find guides on how to perform Umrah through easy-to-follow video visuals. Stay informed with all the latest news related to Hajj and Umrah by subscribing to our YouTube channel. If you want to learn more about Hajj and Umrah, click the button below.'`}
             </p>
-            <button type="button" className="min-w-36 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Watch Now</button>
+            <a target="_blank" href="https://www.youtube.com/@alhabibtraveluk" type="button" className="text-center min-w-48 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Visit YouTube Channel</a>
           </div>
-          <iframe id="yt-video-iframe" className="w-full max-w-[600px]" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe id="yt-video-iframe" className="w-full max-w-[600px] rounded-lg" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
         <div id="pkg-listing-section" className="px-5 flex flex-col justify-center items-center gap-5">
@@ -111,7 +111,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
 // Fetch packages with Static site generation
 export async function getStaticProps() {
   await connectDb();
-  const packages = await Package.find({}).lean() // fetch all packages
+  const packages = await Package.find({type: 'Umrah'}).lean() // fetch all packages
   const popularPkgs = packages.filter(pkg => pkg.rating === 5);
   const fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
   const threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
