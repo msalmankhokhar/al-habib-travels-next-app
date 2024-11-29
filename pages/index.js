@@ -1,13 +1,17 @@
 import Image from "next/image";
 import PackageCard from "@/components/PackageCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faBars, faGreaterThan } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faBars,
+  faGreaterThan,
+} from "@fortawesome/free-solid-svg-icons";
 import connectDb, { serializePackages } from "@/lib/mongoose";
 import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
-import bgImg from '@/public/img/posters/2.jpg'
+import bgImg from "@/public/img/posters/2.jpg";
 import Link from "next/link";
 import Reviews from "@/components/Sections/Reviews";
 import Faqs from "@/components/Sections/Faqs";
@@ -19,16 +23,29 @@ import QueryForm from "@/components/Sections/QueryForm";
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
     <>
-      <Head 
+      <Head
         title={"Al Habib Travel Ltd."}
-        desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
+        desc={
+          "Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"
+        }
       />
       <header className="relative flex flex-col bg-gray-200">
         <TopBanner />
         <Navbar />
         {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
-        <div id="header-content" className="max-w-screen-lg mx-auto w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5">
-          <Image decoding="async" fill objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur" />
+        <div
+          id="header-content"
+          className="max-w-screen-2xl mx-auto w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5"
+        >
+          <Image
+            decoding="async"
+            fill
+            objectFit="cover"
+            objectPosition="center"
+            alt="cover photo hajj"
+            src={bgImg}
+            placeholder="blur"
+          />
         </div>
 
         {/* <div id="header-content" className="z-10 h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
@@ -38,68 +55,108 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             <Link scroll={false} href={`/#pkg-listing-section`} className="text-center w-min min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Book Now</Link>
           </div>
         </div> */}
-
       </header>
       <main className="flex flex-col gap-24">
-
-        <div id="query-form-section" className="pt-16 px-3 flex flex-col justify-center items-center gap-5">      
-          <h1 className="font-bold brand-blue text-3xl">Package Customization Form</h1>
-          <p className="text-gray-500">Fill your travel requirements below. Our team will get back to you</p>
-          <QueryForm/>
+        <div
+          id="query-form-section"
+          className="pt-16 px-3 flex flex-col justify-center items-center gap-5"
+        >
+          <h1 className="font-bold brand-blue text-3xl">
+            Package Customization Form
+          </h1>
+          <p className="text-gray-500">
+            Fill your travel requirements below. Our team will get back to you
+          </p>
+          <QueryForm />
         </div>
 
-        <div id="youtube-video-section" className="px-5 flex flex-col lg:flex-row gap-5 justify-center items-center">
+        <div
+          id="youtube-video-section"
+          className="px-5 flex flex-col lg:flex-row gap-5 justify-center items-center"
+        >
           <div className="flex flex-col gap-5 max-w-screen-sm w-full items-center lg:items-start">
-            <h1 className="font-bold brand-blue text-3xl">Lets plan your <span className="brand-yellow">Umrah</span> Package</h1>
+            <h1 className="font-bold brand-blue text-3xl">
+              Lets plan your <span className="brand-yellow">Umrah</span> Package
+            </h1>
             <h2 className="font-bold brand-yellow text-xl">{`"Explore Umrah at our official youtube channel"`}</h2>
             <p className="text-gray-500">
-              {`Visual guidance is easy to understand, making your journey smoother. We've uploaded Umrah content on Al Habib Travel's official YouTube channel to keep you updated with the latest Umrah Packages. You'll also find guides on how to perform Umrah through easy-to-follow video visuals. Stay informed with all the latest news related to Hajj and Umrah by subscribing to our YouTube channel. If you want to learn more about Hajj and Umrah, click the button below.'`}
+              {`At Al Habib Travel, we believe in more than just booking your Umrah trip — we’re here to guide you every step of the way. Whether you’re planning for the perfect Umrah package or choosing the right dates for your journey, we’ve got you covered. Our YouTube channel is your trusted resource, offering expert advice on how to select the best packages, what to expect during your trip, and insider tips on the best times to travel.
+              We understand how important this journey is, and we want you to feel confident and supported. Ready to learn more? Watch our video now and take the first step towards a blessed Umrah journey.'`}
             </p>
-            <button type="button" className="min-w-36 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Watch Now</button>
+            <button
+              type="button"
+              className="min-w-36 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full"
+            >
+              Watch Now
+            </button>
           </div>
-          <iframe id="yt-video-iframe" className="w-full max-w-[600px]" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe
+            id="yt-video-iframe"
+            className="w-full max-w-[600px]"
+            src="https://www.youtube.com/embed/PP2JlHwupqE?si=jvieRT0a5MDbCmze"
+            title="Cheapest Umrah Package from United Kingdom (UK)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
 
-        <div id="pkg-listing-section" className="px-5 flex flex-col justify-center items-center gap-5">
+        <div
+          id="pkg-listing-section"
+          className="px-5 flex flex-col justify-center items-center gap-5"
+        >
           <h1 className="font-bold brand-blue text-3xl">Popular Packages</h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
-            {
-              popularPkgs.length > 0 ? popularPkgs.map((pkg)=>{
-                return <PackageCard key={pkg.title} {...pkg}/>
-              }) : (<p className="text-red-500 font-black">No Packages found</p>)
-            }
+            {popularPkgs.length > 0 ? (
+              popularPkgs.map((pkg) => {
+                return <PackageCard key={pkg.title} {...pkg} />;
+              })
+            ) : (
+              <p className="text-red-500 font-black">No Packages found</p>
+            )}
           </div>
           {/* <button type="button" className="min-w-36 w-min border bg-gray-100 hover:bg-white transition-colors duration-300 text-sm p-3 rounded-full">Load More</button> */}
         </div>
 
-        <div id="four-star-section" className="px-5 flex flex-col justify-center items-center gap-5">
+        <div
+          id="four-star-section"
+          className="px-5 flex flex-col justify-center items-center gap-5"
+        >
           <h1 className="font-bold brand-blue text-3xl">4 Star Packages</h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
-          {
-              fourStarPkgs.length > 0 ? fourStarPkgs.map((pkg)=>{
-                return <PackageCard key={pkg.title} {... pkg}/>
-              }) : (<p className="text-red-500 font-black">No Packages found</p>)
-            }
+            {fourStarPkgs.length > 0 ? (
+              fourStarPkgs.map((pkg) => {
+                return <PackageCard key={pkg.title} {...pkg} />;
+              })
+            ) : (
+              <p className="text-red-500 font-black">No Packages found</p>
+            )}
           </div>
           {/* <button type="button" className="min-w-36 w-min border bg-gray-100 hover:bg-white transition-colors duration-300 text-sm p-3 rounded-full">Load More</button> */}
         </div>
 
-        <div id="three-star-section" className="px-5 flex flex-col justify-center items-center gap-5">
+        <div
+          id="three-star-section"
+          className="px-5 flex flex-col justify-center items-center gap-5"
+        >
           <h1 className="font-bold brand-blue text-3xl">3 Star Packages</h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
-          {
-              threeStarPkgs.length > 0 ? threeStarPkgs.map((pkg)=>{
-                return <PackageCard key={pkg.title} {... pkg}/>
-              }) : (<p className="text-red-500 font-black">No Packages found</p>)
-            }
+            {threeStarPkgs.length > 0 ? (
+              threeStarPkgs.map((pkg) => {
+                return <PackageCard key={pkg.title} {...pkg} />;
+              })
+            ) : (
+              <p className="text-red-500 font-black">No Packages found</p>
+            )}
           </div>
           {/* <button type="button" className="min-w-36 w-min border bg-gray-100 hover:bg-white transition-colors duration-300 text-sm p-3 rounded-full">Load More</button> */}
         </div>
 
-        <SpecialOffer/>
+        <SpecialOffer />
 
-        <Reviews padding={false}/>
-        <Faqs padding={false}/>
+        <Reviews padding={false} />
+        <Faqs padding={false} />
         <Partners />
       </main>
       <Footer />
@@ -107,20 +164,19 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   );
 }
 
-
 // Fetch packages with Static site generation
 export async function getStaticProps() {
   await connectDb();
-  const packages = await Package.find({}).lean() // fetch all packages
-  const popularPkgs = packages.filter(pkg => pkg.rating === 5);
-  const fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
-  const threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
+  const packages = await Package.find({}).lean(); // fetch all packages
+  const popularPkgs = packages.filter((pkg) => pkg.rating === 5);
+  const fourStarPkgs = packages.filter((pkg) => pkg.rating === 4);
+  const threeStarPkgs = packages.filter((pkg) => pkg.rating === 3);
 
   return {
     props: {
-      popularPkgs : serializePackages(popularPkgs),
-      fourStarPkgs : serializePackages(fourStarPkgs),
-      threeStarPkgs : serializePackages(threeStarPkgs)
+      popularPkgs: serializePackages(popularPkgs),
+      fourStarPkgs: serializePackages(fourStarPkgs),
+      threeStarPkgs: serializePackages(threeStarPkgs),
     },
   };
 }
