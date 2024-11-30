@@ -101,7 +101,6 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             allowfullscreen
           ></iframe>
             <a target="_blank" href="https://www.youtube.com/@alhabibtraveluk" type="button" className="text-center min-w-48 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Visit YouTube Channel</a>
-          </div>
           <iframe id="yt-video-iframe" className="w-full max-w-[600px] rounded-lg" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
@@ -171,23 +170,22 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
 export async function getStaticProps() {
   await connectDb();
   
-  const packages = await Package.find({}).lean(); // fetch all packages
-  const popularPkgs = packages.filter((pkg) => pkg.rating === 5);
-  const fourStarPkgs = packages.filter((pkg) => pkg.rating === 4);
-  const threeStarPkgs = packages.filter((pkg) => pkg.rating === 3);
-
-  const packages = await Package.find({type: 'Umrah'}).lean() // fetch all packages
-  const popularPkgs = packages.filter(pkg => pkg.rating === 5);
-  const fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
-  const threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
+  var packages = await Package.find({}).lean(); // fetch all packages
+  var popularPkgs = packages.filter((pkg) => pkg.rating === 5);
+  var fourStarPkgs = packages.filter((pkg) => pkg.rating === 4);
+  var threeStarPkgs = packages.filter((pkg) => pkg.rating === 3);
+  var packages = await Package.find({type: 'Umrah'}).lean() // fetch all packages
+  var popularPkgs = packages.filter(pkg => pkg.rating === 5);
+  var fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
+  var threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
 
   return {
     props: {
       popularPkgs: serializePackages(popularPkgs),
       fourStarPkgs: serializePackages(fourStarPkgs),
       threeStarPkgs: serializePackages(threeStarPkgs),
-    },
-  };
+    }
+  }
 }
 
 // Fetch packages with Server side rendering
