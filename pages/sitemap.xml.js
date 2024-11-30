@@ -5,9 +5,20 @@ import Package from "@/models/Package";
 function generateSiteMap(packages) {
     return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!--We manually set the two URLs we know already-->
      <url>
        <loc>${BASE_URL}</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/contact</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/about</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/privacy-policy</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/ramadan-umrah-packages</loc>
      </url>
      ${
         packages.map((pkg) => {

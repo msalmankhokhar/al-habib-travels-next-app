@@ -43,7 +43,7 @@
 }
 
 .pkgcard .imgHolder{
-  aspect-ratio: 10/8;
+  aspect-ratio: 10/7;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,7 +54,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-blend-mode: multiply;
+}
+.bg-pattern-dark{
+  background-image: url(/img/bg-vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-color: #00454a;
+  background-blend-mode: multiply;
+}
+.bg-pattern-light{
+  background-image: url(/img/bg-vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #D4A10F;
   background-blend-mode: multiply;
 }
 
@@ -69,6 +84,10 @@
 #special-offer-img-wrapper{
   width: 80vw;
   aspect-ratio: 1/1;
+}
+
+.holyplaces-container > div:nth-child(even){
+  flex-direction: row-reverse;
 }
 
 @media screen and (min-width: 1024) {
@@ -94,4 +113,8 @@
 
 #header-text-wrapper{
   background-color: rgba(0, 0, 0, 0.37);
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
