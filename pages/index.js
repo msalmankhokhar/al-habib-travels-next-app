@@ -83,12 +83,13 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
               {`At Al Habib Travel, we believe in more than just booking your Umrah trip — we’re here to guide you every step of the way. Whether you’re planning for the perfect Umrah package or choosing the right dates for your journey, we’ve got you covered. Our YouTube channel is your trusted resource, offering expert advice on how to select the best packages, what to expect during your trip, and insider tips on the best times to travel.
               We understand how important this journey is, and we want you to feel confident and supported. Ready to learn more? Watch our video now and take the first step towards a blessed Umrah journey.'`}
             </p>
-            <button
+            {/* <button
               type="button"
               className="min-w-36 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full"
             >
               Watch Now
-            </button>
+            </button> */}
+            <a target="_blank" href="https://www.youtube.com/@alhabibtraveluk" type="button" className="text-center min-w-48 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Visit YouTube Channel</a>
           </div>
           <iframe
             id="yt-video-iframe"
@@ -100,8 +101,6 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
-            <a target="_blank" href="https://www.youtube.com/@alhabibtraveluk" type="button" className="text-center min-w-48 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Visit YouTube Channel</a>
-          <iframe id="yt-video-iframe" className="w-full max-w-[600px] rounded-lg" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
         <div
