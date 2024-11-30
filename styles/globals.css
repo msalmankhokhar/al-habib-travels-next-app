@@ -7,6 +7,10 @@
   --brand-yellow: #D4A10F;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .brand-blue{
   color: var(--brand-blue);
 }
