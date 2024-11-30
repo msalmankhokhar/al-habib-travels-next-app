@@ -11,7 +11,7 @@ import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
-import bgImg from "@/public/img/posters/2.jpg";
+import bgImg from "@/public/img/posters/3.jpg";
 import Link from "next/link";
 import Reviews from "@/components/Sections/Reviews";
 import Faqs from "@/components/Sections/Faqs";
