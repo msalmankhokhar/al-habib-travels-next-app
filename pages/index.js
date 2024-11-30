@@ -35,7 +35,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
         <div
           id="header-content"
-          className="max-w-screen-2xl mx-auto w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5"
+          className="w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5"
         >
           <Image
             decoding="async"

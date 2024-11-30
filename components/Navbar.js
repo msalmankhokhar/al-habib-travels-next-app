@@ -34,20 +34,20 @@ export default function Navbar() {
     <nav
       className={`navbar ${
         isFixed ? "fixed transition-all duration-1000" : ""
-      } border-b top-0 z-20 flex py-3 px-5 md:px-7 lg:px-12 items-center justify-between bg-white w-full`}
+      } border-b top-0 z-20 flex py-2 px-5 md:px-7 lg:px-12 items-center justify-between bg-white w-full`}
     >
       <div className="flex items-end gap-2">
         <div>
           <Image
             src="/img/logos/logo.png"
             alt="al habib travel logo"
-            width={65}
+            width={60}
             height={55}
           />
         </div>
         <div className="sm:flex mb-1 gap-1 items-baseline leading-none font-bold md:text-xl text-lg brand-blue">
           <div>AL HABIB</div>
-          <div>TRAVEL.</div>
+          <div>TRAVEL UK</div>
         </div>
       </div>
       <ul className="gap-5 hidden items-center">
