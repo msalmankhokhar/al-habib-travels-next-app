@@ -29,7 +29,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           "Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"
         }
       />
-      <header className="relative flex flex-col bg-gray-200">
+      <header className="relative flex flex-col">
         <TopBanner />
         <Navbar />
         {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
@@ -100,6 +100,9 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
+            <a target="_blank" href="https://www.youtube.com/@alhabibtraveluk" type="button" className="text-center min-w-48 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Visit YouTube Channel</a>
+          </div>
+          <iframe id="yt-video-iframe" className="w-full max-w-[600px] rounded-lg" src="https://www.youtube.com/embed/bWLKvCuYM6Q" title="How to perform umrah STEP BY STEP in english" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
         <div
@@ -167,10 +170,16 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
 // Fetch packages with Static site generation
 export async function getStaticProps() {
   await connectDb();
+  
   const packages = await Package.find({}).lean(); // fetch all packages
   const popularPkgs = packages.filter((pkg) => pkg.rating === 5);
   const fourStarPkgs = packages.filter((pkg) => pkg.rating === 4);
   const threeStarPkgs = packages.filter((pkg) => pkg.rating === 3);
+
+  const packages = await Package.find({type: 'Umrah'}).lean() // fetch all packages
+  const popularPkgs = packages.filter(pkg => pkg.rating === 5);
+  const fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
+  const threeStarPkgs = packages.filter(pkg => pkg.rating === 3);
 
   return {
     props: {

@@ -7,14 +7,15 @@ import Image from "next/image";
 import { defaultProps } from "@/components/PackageCard";
 import Rating from "@/components/Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faCreditCard, faPlane, faVanShuttle } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faCreditCard, faPhone, faPlane, faVanShuttle } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
 import Head from "@/components/Head";
+import ContactCardNav from "@/components/ContactCardNav";
 
 export default function PackageDetail({ pkg }) {
     const router = useRouter()
-    const pkgTitle = router.query.title
+    const pkgTitle = router.query.slug.replace(/-/g, " ");
     return (
         <>
             <Head
@@ -131,6 +132,20 @@ export default function PackageDetail({ pkg }) {
                         </div>
                     </div>
                 </div>
+                <div className="flex flex-col items-center">
+                    <h1 className="font-bold text-teal-800 sm:text-2xl my-5 text-2xl">Order Now !</h1>
+                    <div className="flex items-center gap-10 flex-wrap w-fit p-5 rounded-md border">
+                        <ContactCardNav customClass='hidden md:block'/>
+                        <ContactCardNav
+                            customClass='hidden md:block'
+                            title='Call Us Now'
+                            value='0203 504 2344'
+                            link='tel:0203 504 2344'
+                            icon={faPhone}
+                            color='brand-yellow'
+                        />
+                    </div>
+                </div>
             </main>
             <Footer />
         </>
@@ -155,7 +170,8 @@ export default function PackageDetail({ pkg }) {
 
 // Using static site generation instead of SSR:
 export async function getStaticProps({ params }) {
-    const { title } = params;
+    const { slug } = params;
+    const title = slug.replace(/-/g, " ");
     await connectDb(); // Connect to your database
     try {
         const pkg = await Package.findOne({ title }).lean();
@@ -181,7 +197,7 @@ export async function getStaticPaths() {
 
     try {
         const allPackages = await Package.find().lean();
-        const paths = allPackages.map(pkg => ({ params: { title: pkg.title } }));
+        const paths = allPackages.map(pkg => ({ params: { slug: pkg.title.replace(/ /g, "-") } }));
 
         return { paths, fallback: false };
     } catch (error) {

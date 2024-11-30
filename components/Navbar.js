@@ -12,7 +12,7 @@ export default function Navbar() {
       window.scrollY > 0 ? setIsFixed(true) : setIsFixed(false);
     };
     window.addEventListener("scroll", handleScroll);
-
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -208,4 +208,3 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}

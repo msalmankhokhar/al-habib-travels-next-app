@@ -1,6 +1,6 @@
 import Faq from '../Faq'
 
-export default function Faqs({padding=true}) {
+export default function Faqs({padding=true, questions}) {
     return (
       <div className={`${padding?'py-24':null} items-center px-4 md:px-5 lg:px-10 flex flex-col gap-5`}>
       <div className="flex mb-5 flex-col gap-3">
