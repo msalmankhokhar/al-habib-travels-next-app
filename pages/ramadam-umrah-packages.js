@@ -23,7 +23,7 @@ export default function RamadanUmrahPackages({ popularPkgs, fourStarPkgs, threeS
         title={"Al Habib Travels"}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
-      <header className="relative flex flex-col bg-gray-200 mb-16">
+      <header className="relative flex flex-col mb-16">
         <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">
           <p className="text-white text-center text-xs xs:text-sm">Welcome to Al Habib Travels | Your Trusted Hajj and Umrah Partner</p>
         </div>

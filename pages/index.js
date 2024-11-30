@@ -23,7 +23,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         title={"Al Habib Travel Ltd."}
         desc={"Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"}
       />
-      <header className="relative flex flex-col bg-gray-200">
+      <header className="relative flex flex-col">
         <TopBanner />
         <Navbar />
         {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
