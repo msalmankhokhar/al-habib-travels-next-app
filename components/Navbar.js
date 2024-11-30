@@ -45,10 +45,12 @@ export default function Navbar() {
             height={55}
           />
         </div>
-        <div className="sm:flex mb-1 gap-1 items-baseline leading-none font-bold md:text-xl text-lg brand-blue">
-          <div>AL HABIB</div>
-          <div>TRAVEL UK</div>
-        </div>
+        <Link href="/">
+          <div className="sm:flex mb-1 gap-1 items-baseline leading-none font-bold md:text-xl text-lg brand-blue">
+            <div>AL HABIB</div>
+            <div>TRAVEL UK</div>
+          </div>
+        </Link>
       </div>
       <ul className="gap-5 hidden items-center">
         <li>
