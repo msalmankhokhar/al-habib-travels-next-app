@@ -66,11 +66,11 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           className="pt-16 px-3 flex flex-col justify-center items-center gap-5"
         >
           <h1 className="font-bold brand-blue text-2xl sm:text-3xl text-center">
-            Package Customization Form
-          </h1>
-          <p className="text-gray-500">
             Plan Your Umrah Today!
-          </p>
+          </h1>
+          {/* <p className="text-gray-500">
+            Plan Your Umrah Today!
+          </p> */}
           <QueryFormNew />
         </div>
 

@@ -14,6 +14,7 @@ import Faq from "@/components/Faq";
 import Reviews from "@/components/Sections/Reviews";
 import Faqs from "@/components/Sections/Faqs";
 import QueryForm from "@/components/Sections/QueryForm";
+import QueryFormNew from "@/components/QueryFormNew";
 
 export default function Contact() {
   return (
@@ -42,7 +43,7 @@ export default function Contact() {
               below
             </p>
           </div>
-          <div className="flex gap-10 flex-wrap-reverse 2xl:gap-28 justify-center">
+          <div className="flex gap-10 flex-wrap 2xl:gap-28 justify-center">
             {/* contact cards wrapper */}
             <div className="flex flex-col gap-5">
               <ContactCard
@@ -66,7 +67,7 @@ export default function Contact() {
             </div>
 
             {/* Query / Contact Form */}
-            <QueryForm/>
+            <QueryFormNew/>
             
           </div>
         </div>
