@@ -204,7 +204,16 @@ export default function RamadanUmrahPackages({
 
 // Fetch packages with Static site generation
 export async function getStaticProps() {
-  await connectDb();
+  // const connectionStatus = await connectDb();
+  if (true) {
+    return {
+      props: {
+        popularPkgs: [],
+        fourStarPkgs: [],
+        threeStarPkgs: [],
+      }
+    }
+  }
   const packages = await Package.find({ type: "Ramadan" }).lean(); // fetch all packages
   const popularPkgs = packages.filter((pkg) => pkg.rating === 5);
   const fourStarPkgs = packages.filter((pkg) => pkg.rating === 4);
