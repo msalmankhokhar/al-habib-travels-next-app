@@ -204,8 +204,8 @@ export default function RamadanUmrahPackages({
 
 // Fetch packages with Static site generation
 export async function getStaticProps() {
-  // const connectionStatus = await connectDb();
-  if (true) {
+  const connectionStatus = await connectDb();
+  if (!connectionStatus) {
     return {
       props: {
         popularPkgs: [],
