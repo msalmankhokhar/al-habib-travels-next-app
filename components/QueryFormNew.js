@@ -21,7 +21,7 @@ export default function QueryFormNew() {
                     <span className='font-semibold'>Support</span>
                 </div>
             </div>
-            <form action="" className="bg-teal-800 py-5 px-3 xs:px-5">
+            <form action="" className="bg-pattern-dark py-5 px-3 xs:px-5 text-center">
                 {/* inputs container */}
                 <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 xs:gap-5">
                     <div className="flex flex-col gap-2 flex-wrap">
@@ -57,8 +57,8 @@ export default function QueryFormNew() {
                         <label htmlFor="transportInput" className="text-white font-semibold">Transportation</label>
                         <input placeholder="Yes" id="transportInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none" />
                     </div>
-                    <button className="bg-teal-700 text-white font-semibold p-3 mt-3 bg-brand-yellow rounded-md">Submit</button>
                 </div>
+                <button type="button" className="bg-teal-700 text-white font-semibold px-7 py-3 mt-5 bg-brand-yellow rounded-md">Submit</button>
             </form>
         </div>
     )
