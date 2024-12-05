@@ -171,8 +171,8 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
 
 // Fetch packages with Static site generation
 export async function getStaticProps() {
-  // const connectionStatus = await connectDb();
-  if (!false) {
+  const connectionStatus = await connectDb();
+  if (!connectionStatus) {
     return {
       props: {
         popularPkgs: [],
