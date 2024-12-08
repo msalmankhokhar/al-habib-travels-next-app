@@ -48,17 +48,18 @@ export default function RamadanUmrahPackages({
 
         <div
           id="header-content"
-          className="w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5"
+          className="w-full bg-pattern-dark relative aspect-[4/1] flex-1 px-3 flex flex-col items-center justify-center gap-5"
         >
           <Image
-            className=""
             decoding="async"
-            fill
+            width={1100}
+            height={300}
             objectFit="cover"
             objectPosition="center"
             alt="cover photo hajj"
             src={bgImg}
             placeholder="blur"
+            className="rounded-xl relative top-10"
           />
         </div>
       </header>
@@ -67,7 +68,7 @@ export default function RamadanUmrahPackages({
           id="pkg-listing-section"
           className="px-5 flex flex-col justify-center items-center gap-5"
         >
-          <h1 className="font-bold brand-blue text-center text-3xl max-w-2xl">
+          <h1 className="font-bold brand-blue text-center mt-5 text-3xl max-w-2xl">
             Popular Ramadan Packages
           </h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
