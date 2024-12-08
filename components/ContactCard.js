@@ -17,7 +17,7 @@ export default function ContactCard({
   responseTime,
 }) {
   return (
-    <div className="gap-3 bg-white flex flex-col border-box items-center shadow-slate-300 shadow-md py-7 px-3 xs:px-7 sm:px-10 rounded-2xl">
+    <div className="gap-3 bg-white flex flex-col border-box items-center py-7 px-3 xs:px-7 sm:px-10 rounded-2xl">
       {/* <FontAwesomeIcon icon={icon} className="brand-yellow text-3xl"/> */}
       <Image src={`/img/icons/${imgName || defaultProps.imgName}`} width={40} height={40} alt="icon"/>
       <h2 className="font-bold text-2xl">{contactNo || defaultProps.contactNo}</h2>

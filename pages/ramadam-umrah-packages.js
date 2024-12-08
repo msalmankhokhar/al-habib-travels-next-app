@@ -23,6 +23,7 @@ import RamadanFeatureCard from "@/components/RamadanFeatureCard";
 import Partners from "@/components/Sections/Partners";
 import { faCalendarCheck } from "@fortawesome/free-regular-svg-icons";
 import SpecialOffer from "@/components/Sections/SpecialOffer";
+import BgOverlay from "@/components/BgOverlay";
 
 export default function RamadanUmrahPackages({
   popularPkgs,
@@ -37,7 +38,7 @@ export default function RamadanUmrahPackages({
           "Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"
         }
       />
-      <header className="relative flex flex-col mb-16">
+      <header className="relative flex flex-col">
         <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">
           <p className="text-white text-center text-xs xs:text-sm">
             Welcome to Al Habib Travels | Your Trusted Hajj and Umrah Partner
@@ -63,12 +64,13 @@ export default function RamadanUmrahPackages({
           />
         </div>
       </header>
-      <main className="flex flex-col gap-24">
+      <main className="flex flex-col gap-24 bgOverlay pt-20">
+        <BgOverlay/>
         <div
           id="pkg-listing-section"
           className="px-5 flex flex-col justify-center items-center gap-5"
         >
-          <h1 className="font-bold brand-blue text-center mt-5 text-3xl max-w-2xl">
+          <h1 className="font-bold brand-blue text-center text-3xl max-w-2xl">
             Popular Ramadan Packages
           </h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">

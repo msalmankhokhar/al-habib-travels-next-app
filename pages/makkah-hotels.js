@@ -1,8 +1,10 @@
+import BgOverlay from "@/components/BgOverlay"
 import Footer from "@/components/Footer"
 import Head from "@/components/Head"
 import HolyPlace from "@/components/HolyPlace"
 import HotelRow from "@/components/HotelRow"
 import Navbar from "@/components/Navbar"
+import QueryFormNew from "@/components/QueryFormNew"
 import Rating from "@/components/Rating"
 import QueryForm from "@/components/Sections/QueryForm"
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
@@ -26,8 +28,8 @@ export default function makkahHotels() {
       </div>
       <Navbar />
       
-      <main>
-
+      <main className="bgOverlay">
+        <BgOverlay/>
         <div className="px-3 pt-7">
             <h1 className="text-3xl md:text-4xl mb-5 font-bold brand-blue text-center">Makkah Hotels</h1>
             <div className="flex justify-center rounded-lg gap-4 flex-wrap w-fit mx-auto">
@@ -113,8 +115,9 @@ export default function makkahHotels() {
             </div>
         </div>
         {/* Holy Places in Makkah end*/}
-        <div className="flex items-center justify-center">
-            <QueryForm />
+        <div className="flex flex-col items-center justify-center py-10">
+            <h1 className="sm:text-3xl text-xl font-bold mb-5">Book your Umrah Package</h1>
+            <QueryFormNew />
         </div>
       </main>
 

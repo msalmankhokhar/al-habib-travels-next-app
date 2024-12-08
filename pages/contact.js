@@ -32,20 +32,20 @@ export default function Contact() {
       </div>
       <Navbar />
       
-      <main>
-        <div className="py-20 flex flex-col gap-5 w-screen px-3 md:px-5 lg:px-10 bg-[#D4A10F0D]">
+      <main className="mx-auto max-w-screen-2xl">
+        <div className="py-20 flex flex-col gap-5 px-3 md:px-5 lg:px-10 bg-teal-900">
           <div className="flex flex-col gap-3">
-            <h1 id="contact-us-h" className="text-center text-4xl leading-none font-extrabold brand-blue">
+            <h1 id="contact-us-h" className="text-center text-4xl leading-none font-extrabold text-white">
               Contact Us
             </h1>
-            <p className="text-base mb-5 text-center">
+            <p className="text-base mb-5 text-center text-white">
               You{`'`}re welcome to contact us using the contact details listed
               below
             </p>
           </div>
           <div className="flex gap-10 flex-wrap 2xl:gap-28 justify-center">
             {/* contact cards wrapper */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col lg:flex-row gap-5">
               <ContactCard
                 imgName={'phone.png'}
                 contactNo={"0203 504 2344"}
@@ -67,7 +67,9 @@ export default function Contact() {
             </div>
 
             {/* Query / Contact Form */}
-            <QueryFormNew/>
+            <QueryFormNew 
+              cols={"grid-cols-2"}
+            />
             
           </div>
         </div>

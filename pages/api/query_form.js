@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       const template = readFileSync(templatePath, 'utf-8');
       const htmlContent = ejs.render(template, { name })
 
-      // sending Email
+      // // sending Email
       await mailer.sendMail({
         from: `"Al Habib Travel Ltd." <${process.env.SMTP_USER}>`,
         to: email,

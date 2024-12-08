@@ -20,6 +20,7 @@ import SpecialOffer from "@/components/Sections/SpecialOffer";
 import TopBanner from "@/components/TopBanner";
 import QueryForm from "@/components/Sections/QueryForm";
 import QueryFormNew from "@/components/QueryFormNew";
+import BgOverlay from "@/components/BgOverlay";
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -60,14 +61,15 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           </div>
         </div> */}
       </header>
-      <main className="flex flex-col gap-24">
+      <main className="flex flex-col gap-24 bgOverlay">
+        <BgOverlay/>
         <div
           id="query-form-section"
           className="pt-16 px-3 flex flex-col justify-center items-center gap-5"
         >
-          <h1 className="font-bold brand-blue text-2xl sm:text-3xl text-center">
+          {/* <h1 className="font-bold brand-blue text-2xl sm:text-3xl text-center">
             Plan Your Umrah Today!
-          </h1>
+          </h1> */}
           {/* <p className="text-gray-500">
             Plan Your Umrah Today!
           </p> */}

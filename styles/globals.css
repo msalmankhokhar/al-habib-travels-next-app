@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.bgOverlay{
+  background-color: #ffffffe2;
+}
+
 .brand-blue{
   color: var(--brand-blue);
 }

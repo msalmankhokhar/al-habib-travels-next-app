@@ -20,7 +20,7 @@ export const defaultProps = {
 export default function PackageCard({ title, type, imgSrc, imgSrcCustom, price, rating, makkahHotel, madinahHotel, makkahNights, madinahNights }) {
   const slug = title.replace(/ /g, "-")
   return (
-    <div className="pkgcard border rounded-lg overflow-hidden w-full">
+    <div className="pkgcard border rounded-lg overflow-hidden w-full bg-white">
       <div className="imgHolder relative w-full">
         <Image className="bg-gray-200" layout="fill" objectFit="cover" objectPosition="center" src={ type==="Ramadan" ? '/img/pkgs/ramadan.png' : imgSrcCustom || imgSrc || defaultProps.imgSrc } alt="Package card cover photo" />
         <div className="absolute top-0 right-0 p-2 px-5 w-32 rounded-es-lg text-white flex flex-col bg-teal-800">
