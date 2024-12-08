@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Work_Sans as Font } from "next/font/google";
+import { Poppins as Font } from "next/font/google";
 import useScrollRestoration from "@/hooks/useScrollRestroration";
 import { PagesTopLoader } from 'nextjs-toploader/pages'
 import { GoogleTagManager } from '@next/third-parties/google'

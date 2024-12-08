@@ -25,9 +25,9 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
     <>
       <Head
-        title={"Al Habib Travel Ltd."}
+        title={"Al Habib Travel UK"}
         desc={
-          "Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"
+          "Al Habib Travel is the most trusted & reliable agency among UK Muslims. We provide bespoke Umrah travel solutions & package designing services to meet budget range and facilities requirements of pilgrims."
         }
       />
       <header className="relative flex flex-col">

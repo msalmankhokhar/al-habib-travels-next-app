@@ -20,9 +20,9 @@ export default function Contact() {
   return (
     <>
       <Head
-        title={"Contact Us | Al Habib Travel Ltd."}
+        title={"Contact Us"}
         desc={
-          "Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"
+          "Contact Us on whatsapp at +44203 504 2344, on phone at 0203 504 2344 or on email at info@alhabibtravel.co.uk, and book your Umrah Package today"
         }
       />
       <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">

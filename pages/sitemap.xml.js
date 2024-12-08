@@ -1,6 +1,7 @@
 import { BASE_URL } from "@/lib/constants";
 import connectDb from "@/lib/mongoose";
 import Package from "@/models/Package";
+import { generateSlug } from "@/lib/helpers";
 
 function generateSiteMap(packages) {
     return `<?xml version="1.0" encoding="UTF-8"?>
@@ -20,11 +21,20 @@ function generateSiteMap(packages) {
      <url>
        <loc>${BASE_URL}/ramadan-umrah-packages</loc>
      </url>
+     <url>
+       <loc>${BASE_URL}/visa</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/makkah-hotels</loc>
+     </url>
+     <url>
+       <loc>${BASE_URL}/madinah-hotels</loc>
+     </url>
      ${
         packages.map((pkg) => {
             return `
             <url>
-                <loc>${`${BASE_URL}/package/${pkg.title}`}</loc>
+                <loc>${`${BASE_URL}/package/${generateSlug(pkg.title)}`}</loc>
             </url>
             `;
         }).join('')}

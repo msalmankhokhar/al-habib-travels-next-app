@@ -7,12 +7,12 @@ export default function about() {
     return (
         <>
         <Head
-        title={'About Us | Al Habib Travel Ltd.'}
+        title={'About Us'}
         desc={`At Al Habib Travel, we offer complete Hajj and Umrah packages, including flights, visas, hotels, and ground transport. We have packages for every budget and provide 24/7 support to make your journey smooth. What makes us different is that we don't just handle bookings. We guide and educate pilgrims through our social media, YouTube, and local events, helping you feel prepared and confident.`}
         />
         <Navbar />
         <main className='px-5 md:px-7 lg:px-12 pt-10 max-w-screen-lg mx-auto'>
-            <h1 className='font-bold mb-5 text-2xl brand-yellow'>About Us | Al Habib Travel Ltd</h1>
+            <h1 className='font-bold mb-5 text-2xl brand-yellow'>About Us</h1>
 
             <div className="mb-5">
                 <h1 className='font-bold text-lg mb-3 brand-blue'>Our Services</h1>
