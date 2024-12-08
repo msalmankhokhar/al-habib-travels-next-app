@@ -67,19 +67,19 @@ export default function QueryFormNew() {
                     {/* Name */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="nameInput" className="text-white font-semibold">Your Name</label>
-                        <input name="name" placeholder="Name" id="nameInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none" />
+                        <input required name="name" placeholder="Name" id="nameInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none" />
                     </div>
 
                     {/* Email */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="nameInput" className="text-white font-semibold">Email</label>
-                        <input name="email" placeholder="Email" id="emailInput" type="email" className="text-black rounded-md p-3 outline-none bg-white border-none" />
+                        <input required name="email" placeholder="Email" id="emailInput" type="email" className="text-black rounded-md p-3 outline-none bg-white border-none" />
                     </div>
 
                     {/* Phone */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="phoneInput" className="text-white font-semibold">Contact No.</label>
-                        <input name="phone" placeholder="Number" id="phoneInput" type="tel" className="text-black rounded-md p-3 outline-none bg-white border-none" />
+                        <input required name="phone" placeholder="Number" id="phoneInput" type="tel" className="text-black rounded-md p-3 outline-none bg-white border-none" />
                     </div>
 
                     {/* Transport */}
@@ -113,7 +113,7 @@ export default function QueryFormNew() {
                     {/* Number of Passengers */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="noofpeopleInput" className="text-white font-semibold">No. of People</label>
-                        <input name="4" min={1} max={7} placeholder="No. of People" id="noofpeopleInput" type="number" className="text-black rounded-md p-3 outline-none bg-white border-none" />
+                        <input name="no_of_people" min={1} max={7} placeholder="No. of People" id="noofpeopleInput" type="number" className="text-black rounded-md p-3 outline-none bg-white border-none" />
                     </div>
 
                     {/* Airport */}
