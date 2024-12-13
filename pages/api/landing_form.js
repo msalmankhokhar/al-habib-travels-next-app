@@ -4,6 +4,7 @@ import mailer from '@/lib/mailer';
 import ejs from 'ejs';
 import { readFileSync } from 'fs'
 import { join } from 'path';
+import { owner_reciepients } from '@/lib/constants';
 
 export default async function handler(req, res) {
   await connect(); // Connect to MongoDB
@@ -36,7 +37,7 @@ export default async function handler(req, res) {
         // // sending Email
         await mailer.sendMail({
           from: `"Al Habib Travel" <${process.env.SMTP_USER}>`,
-          to: email,
+          to: owner_reciepients,
           subject: 'Your query has been recorded',
           html: htmlContent
         })
