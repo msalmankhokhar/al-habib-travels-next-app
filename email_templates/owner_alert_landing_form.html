@@ -82,8 +82,8 @@
     <tr>
       <td class="content">
         <h2>Hello <%= name %>,</h2>
-        <p>Thank you for contacting <strong>Al Habib Travel</strong> regarding our Umrah booking services. We have successfully received your query and our team will get in touch with you shortly.</p>
-        <p>Here are the details of your inquiry:</p>
+        <p>You got a new message from <strong><%= name %></strong> from landing page.</p>
+        <p>Here are the details</p>
         <table>
           <% for (let key in data) { %>
             <tr>
@@ -92,14 +92,12 @@
             </tr>
           <% } %>
         </table>
-        <p>We will reach out to you soon with further information.</p>
-        <p>If you have any questions, feel free to reply to this email.</p>
       </td>
     </tr>
     <tr>
       <td class="footer">
-        <p>Thank you for choosing <strong>Al Habib Travel</strong></p>
-        <p><a target="_blank" href="https://www.alhabibtravel.co.uk">Visit our website</a> for more information.</p>
+        <!-- <p>Thank you for choosing <strong style="color: #D4A10F;">Al Habib Travel</strong></p>
+        <p><a target="_blank" href="https://www.alhabibtravel.co.uk">Visit our website</a> for more information.</p> -->
         <p>&copy; 2024 Al Habib Travel | All Rights Reserved</p>
       </td>
     </tr>

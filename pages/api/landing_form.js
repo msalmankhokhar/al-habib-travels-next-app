@@ -11,14 +11,14 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       const data = JSON.parse(req.body);
-      const { name, email } = data; 
+      const { name, email } = data;
 
       {
         // generating html for user
-        const templatePath = join(process.cwd(), 'email_templates', 'user_welcome.html');
+        const templatePath = join(process.cwd(), 'email_templates', 'user_landing_form.html');
         const template = readFileSync(templatePath, 'utf-8');
         const htmlContent = ejs.render(template, { name, data })
-
+  
         // // sending Email
         await mailer.sendMail({
           from: `"Al Habib Travel" <${process.env.SMTP_USER}>`,
@@ -27,18 +27,17 @@ export default async function handler(req, res) {
           html: htmlContent
         })
       }
-
       {
         // generating html for owner
-        const templatePath = join(process.cwd(), 'email_templates', 'owner_alert_contact_form.html');
+        const templatePath = join(process.cwd(), 'email_templates', 'owner_alert_landing_form.html');
         const template = readFileSync(templatePath, 'utf-8');
         const htmlContent = ejs.render(template, { name, data })
-
+  
         // // sending Email
         await mailer.sendMail({
           from: `"Al Habib Travel" <${process.env.SMTP_USER}>`,
-          to: 'kjokhars@gmail.com',
-          subject: `Contact from Submitted by ${name}`,
+          to: email,
+          subject: 'Your query has been recorded',
           html: htmlContent
         })
       }
