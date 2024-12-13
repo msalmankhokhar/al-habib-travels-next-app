@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         await mailer.sendMail({
           from: `"Al Habib Travel" <${process.env.SMTP_USER}>`,
           to: owner_reciepients,
-          subject: 'Your query has been recorded',
+          subject: 'New Form Alert from Landing Page',
           html: htmlContent
         })
       }
