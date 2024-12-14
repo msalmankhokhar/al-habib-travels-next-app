@@ -85,10 +85,10 @@
         <p>Thank you for contacting <strong>Al Habib Travel</strong> regarding our Umrah booking services. We have successfully received your query and our team will get in touch with you shortly.</p>
         <p>Here are the details of your inquiry:</p>
         <table>
-          <% for (let key in data) { %>
+          <% for (let key in userData) { %>
             <tr>
               <td><strong><%= key %>:</strong></td>
-              <td><%= data[key] %></td>
+              <td><%= userData[key] %></td>
             </tr>
           <% } %>
         </table>
