@@ -12,13 +12,14 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       const data = JSON.parse(req.body);
-      const { name, email } = data;
+      const { name, email, phone, passengers } = data;
+      const userData = { name, email, phone, passengers }
 
       {
         // generating html for user
         const templatePath = join(process.cwd(), 'email_templates', 'user_landing_form.html');
         const template = readFileSync(templatePath, 'utf-8');
-        const htmlContent = ejs.render(template, { name, data })
+        const htmlContent = ejs.render(template, { name, userData })
   
         // // sending Email
         await mailer.sendMail({
