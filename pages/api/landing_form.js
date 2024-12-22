@@ -1,5 +1,4 @@
 // pages/api/query_form.js
-import connect from '@/lib/mongoose';
 import mailer from '@/lib/mailer';
 import ejs from 'ejs';
 import { readFileSync } from 'fs'
@@ -7,7 +6,6 @@ import { join } from 'path';
 import { owner_reciepients } from '@/lib/constants';
 
 export default async function handler(req, res) {
-  await connect(); // Connect to MongoDB
 
   if (req.method === 'POST') {
     try {
