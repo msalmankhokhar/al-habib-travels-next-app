@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
   if (req.method === 'POST') {
     try {
-      const data = JSON.parse(req.body);
+      const data = req.body;
       const { name, email, phone, passengers } = data;
       const userData = { name, email, phone, passengers }
 
