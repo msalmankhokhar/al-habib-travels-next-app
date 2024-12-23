@@ -13,6 +13,11 @@ export default async function handler(req, res) {
       const { name, email, phone, passengers } = data;
       const userData = { name, email, phone, passengers }
 
+      // log
+      console.log('Form submitted:', data);
+      console.log('Sending email to customer:', email);
+      console.log('Sending email to owner:', owner_reciepients);
+
       {
         // generating html for user
         const templatePath = join(process.cwd(), 'email_templates', 'user_landing_form.html');
