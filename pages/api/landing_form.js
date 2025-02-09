@@ -18,6 +18,8 @@ export default async function handler(req, res) {
       console.log('Sending email to customer:', email);
       console.log('Sending email to owner:', owner_reciepients);
 
+      // This commented code sends email notification to user, disabled for now.
+
       // {
       //   // generating html for user
       //   const templatePath = join(process.cwd(), 'email_templates', 'user_landing_form.html');
@@ -32,6 +34,7 @@ export default async function handler(req, res) {
       //     html: htmlContent
       //   })
       // }
+      
       {
         // generating html for owner
         const templatePath = join(process.cwd(), 'email_templates', 'owner_alert_landing_form.html');

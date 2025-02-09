@@ -1,26 +1,18 @@
 import Image from "next/image";
 import PackageCard from "@/components/PackageCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faBars,
-  faGreaterThan,
-} from "@fortawesome/free-solid-svg-icons";
 import connectDb, { serializePackages } from "@/lib/mongoose";
 import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
 import bgImg from "@/public/img/posters/4.jpg";
-import Link from "next/link";
 import Reviews from "@/components/Sections/Reviews";
 import Faqs from "@/components/Sections/Faqs";
 import Partners from "@/components/Sections/Partners";
 import SpecialOffer from "@/components/Sections/SpecialOffer";
 import TopBanner from "@/components/TopBanner";
-import QueryForm from "@/components/Sections/QueryForm";
-import QueryFormNew from "@/components/QueryFormNew";
 import BgOverlay from "@/components/BgOverlay";
+import QueryFormNew from "@/components/QueryFormNew";
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -48,8 +40,8 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             src={bgImg}
             placeholder="blur"
             className="rounded-xl relative top-6"
-            width={1100}
-            height={300}
+            width={2000}
+            height={900}
           />
         </div>
 
