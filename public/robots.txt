@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.alhabibtravel.co.uk/sitemap.xml
+
+# Prevent access to API routes
+Disallow: /api/
+
+# Prevent access to next.js specific files
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
