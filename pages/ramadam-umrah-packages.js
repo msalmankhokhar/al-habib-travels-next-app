@@ -33,9 +33,9 @@ export default function RamadanUmrahPackages({
   return (
     <>
       <Head
-        title={"Al Habib Travels"}
+        title={"Ramadan Umrah Packages"}
         desc={
-          "Welcome to Al Habib Travel | Your Trusted Hajj and Umrah Partner in UK"
+          "Book your blessed Ramadan Umrah Package 2025 with Al Habib Travel UK. Experience 70x more spiritual rewards with our exclusive 3, 4, and 5-star packages starting from £995. Includes flights, hotels near Haram, visa, and ground transport. Special discounts for early bookings and groups. ATOL & IATA protected. Call 0203 504 2344 now!"
         }
       />
       <header className="relative flex flex-col">
@@ -51,21 +51,20 @@ export default function RamadanUmrahPackages({
           id="header-content"
           className="w-full bg-pattern-dark relative aspect-[4/1] flex-1 px-3 flex flex-col items-center justify-center gap-5"
         >
-          <Image
-            decoding="async"
-            width={1100}
-            height={300}
-            objectFit="cover"
-            objectPosition="center"
-            alt="cover photo hajj"
-            src={bgImg}
-            placeholder="blur"
-            className="rounded-xl relative top-10"
-          />
+          <div className="relative -bottom-8 right-0 left-0 w-[90vw] md:w-[80vw] aspect-video">
+            <Image
+              fill
+              decoding="async"
+              alt="cover photo hajj"
+              src={bgImg}
+              placeholder="blur"
+              className="rounded-xl"
+            />
+          </div>
         </div>
       </header>
       <main className="flex flex-col gap-24 bgOverlay pt-20">
-        <BgOverlay/>
+        <BgOverlay />
         <div
           id="pkg-listing-section"
           className="px-5 flex flex-col justify-center items-center gap-5"

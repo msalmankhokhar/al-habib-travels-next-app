@@ -29,20 +29,18 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
         <div
           id="header-content"
-          className="bg-pattern-dark w-full relative aspect-[4/2] flex-1 px-3 flex flex-col items-center justify-center gap-5"
+          className="bg-pattern-dark w-full relative flex-1 px-3 sm:px-5 flex flex-col items-center justify-center gap-5"
         >
-          <Image
-            decoding="async"
-            // fill
-            objectFit="cover"
-            objectPosition="center"
-            alt="cover photo hajj"
-            src={bgImg}
-            placeholder="blur"
-            className="rounded-xl relative top-6"
-            width={2000}
-            height={900}
-          />
+          <div className="relative -bottom-8 right-0 left-0 w-[90vw] md:w-[80vw] aspect-video">
+            <Image
+              fill
+              decoding="async"
+              alt="cover photo hajj"
+              src={bgImg}
+              placeholder="blur"
+              className="rounded-xl"
+            />
+          </div>
         </div>
 
         {/* <div id="header-content" className="z-10 h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
@@ -52,9 +50,10 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             <Link scroll={false} href={`/#pkg-listing-section`} className="text-center w-min min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Book Now</Link>
           </div>
         </div> */}
+
       </header>
       <main className="flex flex-col gap-24 bgOverlay">
-        <BgOverlay/>
+        <BgOverlay />
         <div
           id="query-form-section"
           className="pt-16 px-3 flex flex-col justify-center items-center gap-5"
@@ -166,7 +165,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
 // Fetch packages with Static site generation
 export async function getStaticProps() {
   const connectionStatus = await connectDb();
-  if (!connectionStatus) {
+  if (!connectionStatus || true) {
     return {
       props: {
         popularPkgs: [],
@@ -175,12 +174,12 @@ export async function getStaticProps() {
       }
     }
   }
-  
+
   var packages = await Package.find({}).lean(); // fetch all packages
   var popularPkgs = packages.filter((pkg) => pkg.rating === 5);
   var fourStarPkgs = packages.filter((pkg) => pkg.rating === 4);
   var threeStarPkgs = packages.filter((pkg) => pkg.rating === 3);
-  var packages = await Package.find({type: 'Umrah'}).lean() // fetch all packages
+  var packages = await Package.find({ type: 'Umrah' }).lean() // fetch all packages
   var popularPkgs = packages.filter(pkg => pkg.rating === 5);
   var fourStarPkgs = packages.filter(pkg => pkg.rating === 4);
   var threeStarPkgs = packages.filter(pkg => pkg.rating === 3);

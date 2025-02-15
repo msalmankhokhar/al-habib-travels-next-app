@@ -7,8 +7,8 @@ export default function about() {
     return (
         <>
         <Head
-        title={'About Us'}
-        desc={`At Al Habib Travel, we offer complete Hajj and Umrah packages, including flights, visas, hotels, and ground transport. We have packages for every budget and provide 24/7 support to make your journey smooth. What makes us different is that we don't just handle bookings. We guide and educate pilgrims through our social media, YouTube, and local events, helping you feel prepared and confident.`}
+            title={'About Al Habib Travel | Leading UK Hajj & Umrah Agency'}
+            desc={`Discover Al Habib Travel - Your trusted ATOL & IATA protected Hajj and Umrah partner in the UK. 15+ years of experience, 24/7 support, and comprehensive packages including flights, accommodation, and ground transport. Join thousands of satisfied pilgrims who've trusted us for their sacred journey.`}
         />
         <Navbar />
         <main className='px-5 md:px-7 lg:px-12 pt-10 max-w-screen-lg mx-auto'>

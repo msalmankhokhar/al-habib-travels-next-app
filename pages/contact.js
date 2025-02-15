@@ -20,9 +20,9 @@ export default function Contact() {
   return (
     <>
       <Head
-        title={"Contact Us"}
+        title={"Contact Al Habib Travel | 24/7 Umrah Package Support"}
         desc={
-          "Contact Us on whatsapp at +44203 504 2344, on phone at 0203 504 2344 or on email at info@alhabibtravel.co.uk, and book your Umrah Package today"
+          "Need help planning your Umrah? Contact Al Habib Travel's 24/7 support team. WhatsApp: +44203 504 2344 | Phone: 0203 504 2344 | Email: info@alhabibtravel.co.uk. Get instant quotes and expert guidance for your blessed journey."
         }
       />
       <div className="bg-brand-blue px-5 py-2 flex items-center justify-center">

@@ -15,9 +15,9 @@ export default function makkahHotels() {
   return (
     <>
       <Head
-        title={"Hotels in Makkah"}
+        title={"Makkah Hotels Near Haram | 3 to 5 Star Accommodation"}
         desc={
-          "To fulfil your religious duties as a Muslim, you can travel with the Al Habib Travel and benefit from affordable Umrah packages from the UK. Makkah, the holiest city in Saudi Arabia, is the center for performing the sacred practices of the Muslim community, opening the way for Allah's abundant blessings. Countless pilgrims worldwide aim to enjoy luxurious hotel packages during their spiritual journeys each year."
+          "Book luxury hotels in Makkah near Haram with Al Habib Travel. From 5-star Clock Tower to affordable 3-star options, all walking distance from Masjid Al Haram. Compare prices, amenities & distances. Expert support available 24/7."
         }
         imgSrc="/img/hotels/makkah.png"
       />

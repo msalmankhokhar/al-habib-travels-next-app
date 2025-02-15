@@ -7,8 +7,8 @@ export default function about() {
     return (
         <>
             <Head
-                title={'Privacy Policy'}
-                desc={'This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects you.'}
+                title={'Privacy Policy | Al Habib Travel'}
+                desc={'Learn how Al Habib Travel protects your personal information. Our privacy policy outlines data collection, usage, and security measures to ensure your information is safe while booking Umrah packages.'}
             />
             <Navbar />
             {/* <main className='px-5 md:px-7 lg:px-12 py-10 max-w-screen-lg mx-auto'>

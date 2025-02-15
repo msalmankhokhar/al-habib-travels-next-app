@@ -15,9 +15,9 @@ export default function madinahHotels() {
   return (
     <>
       <Head
-        title={"Hotels in Madinah"}
+        title={"Madinah Hotels Near Masjid Al Nabawi | Best Locations"}
         desc={
-          "To fulfil your religious duties as a Muslim, you can travel with the Al Habib Travel and benefit from affordable Umrah packages from the UK. Madinah, the holiest city in Saudi Arabia, is the center for performing the sacred practices of the Muslim community, opening the way for Allah's abundant blessings. Countless pilgrims worldwide aim to enjoy luxurious hotel packages during their spiritual journeys each year."
+          "Find the perfect hotel in Madinah near Prophet's Mosque. Compare 5-star luxury to budget-friendly 3-star hotels, all within walking distance to Masjid Al Nabawi. Book with ATOL protection. 24/7 support available."
         }
         imgSrc="/img/hotels/madinah.png"
       />
