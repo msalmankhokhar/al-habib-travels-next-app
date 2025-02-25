@@ -31,7 +31,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           id="header-content"
           className="bg-pattern-dark w-full relative flex-1 px-3 sm:px-5 flex flex-col items-center justify-center gap-5"
         >
-          <div className="relative -bottom-8 right-0 left-0 w-[90vw] md:w-[80vw] aspect-video">
+          <div className="relative -bottom-8 right-0 left-0 w-[90vw] md:w-[80vw] aspect-[8/3] border border-gray-700 rounded-xl overflow-hidden">
             <Image
               fill
               decoding="async"
