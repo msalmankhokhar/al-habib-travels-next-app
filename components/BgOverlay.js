@@ -7,7 +7,7 @@ export default function BgOverlay() {
         width={2000}
         height={2000}
         alt="background overlay"
-        className="fixed bottom-0 -z-50"
+        className="fixed bottom-0 -z-50 opacity-50"
         />
     )
 }

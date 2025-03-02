@@ -13,6 +13,7 @@ import SpecialOffer from "@/components/Sections/SpecialOffer";
 import TopBanner from "@/components/TopBanner";
 import BgOverlay from "@/components/BgOverlay";
 import QueryFormNew from "@/components/QueryFormNew";
+import Link from "next/link";
 
 export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
@@ -27,7 +28,9 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         <TopBanner />
         <Navbar />
         {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
-        <div
+
+        {/* Old header start */}
+        {/* <div
           id="header-content"
           className="bg-pattern-dark w-full relative flex-1 px-3 sm:px-5 flex flex-col items-center justify-center gap-5"
         >
@@ -41,7 +44,40 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
               className="rounded-xl"
             />
           </div>
+        </div> */}
+        {/* Old header end */}
+
+        <div className="bg-white">
+          <div
+            id="header-content"
+            className="bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center gap-8"
+          >
+            <div className="absolute inset-0">
+              <Image
+                alt="background image"
+                src={'/img/bg-header-saad.png'}
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="opacity-10"
+              />
+            </div>
+            <div className="relative z-10 flex flex-col items-center gap-8">
+              <h1 className="text-3xl font-bold text-[#00454A]">All Inclusive Umrah Packages with Guided Tour</h1>
+              <p className="text-[#00454A] font-medium max-w-md text-center">
+                All packages include flights, visa processing,
+                accommodation near Haram, ground transport,
+                and a guided tour. Meals are optional.
+              </p>
+              <Link 
+                href={'#query-form-section'} 
+                className="text-sm cursor-pointer text-white font-bold bg-[#D4A10F] hover:bg-[#c29414] transition-colors px-4 py-2.5 rounded-full"
+              >
+                Get Quote - Its free
+              </Link>
+            </div>
+          </div>
         </div>
+
 
         {/* <div id="header-content" className="z-10 h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
           <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col gap-7">
