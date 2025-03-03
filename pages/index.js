@@ -47,10 +47,11 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         </div> */}
         {/* Old header end */}
 
+        {/* New header */}
         <div className="bg-white">
           <div
             id="header-content"
-            className="bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center gap-8"
+            className="shadow-md shadow-black/25 bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[50px] sm:rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center gap-8"
           >
             <div className="absolute inset-0">
               <Image
@@ -61,18 +62,25 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
                 className="opacity-10"
               />
             </div>
-            <div className="relative z-10 flex flex-col items-center gap-8">
-              <h1 className="text-3xl font-bold text-[#00454A]">All Inclusive Umrah Packages with Guided Tour</h1>
-              <p className="text-[#00454A] font-medium max-w-md text-center">
+            <div className="relative z-10 flex flex-col items-center">
+              <h1 className="text-3xl sm:text-4xl font-semibold mb-7 text-[#00454A] text-center">All Inclusive Umrah Packages with Guided Tour.</h1>
+              <p className="text-[#00454A] max-w-md mb-5 sm:text-lg text-center">
                 All packages include flights, visa processing,
                 accommodation near Haram, ground transport,
                 and a guided tour. Meals are optional.
               </p>
+              <Image
+                alt="arrow"
+                src={'/assets/arrow.svg'}
+                width={50}
+                height={50}
+                className="relative left-[120px] top-[10px]"
+              />
               <Link 
                 href={'#query-form-section'} 
-                className="text-sm cursor-pointer text-white font-bold bg-[#D4A10F] hover:bg-[#c29414] transition-colors px-4 py-2.5 rounded-full"
+                className="text-sm cursor-pointer text-white font-semibold bg-[#D4A10F] hover:bg-[#c29414] transition-colors px-4 py-2.5 rounded-full"
               >
-                Get Quote - Its free
+                Get Quote - It&apos;s free
               </Link>
             </div>
           </div>
