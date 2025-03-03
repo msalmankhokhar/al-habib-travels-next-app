@@ -51,7 +51,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         <div className="bg-white">
           <div
             id="header-content"
-            className="shadow-md shadow-black/25 bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[50px] sm:rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center gap-8"
+            className="shadow-md shadow-black/25 bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[50px] sm:rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center"
           >
             <div className="absolute inset-0">
               <Image
