@@ -51,7 +51,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         <div className="bg-white">
           <div
             id="header-content"
-            className="shadow-md shadow-black/25 bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[50px] sm:rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center"
+            className="shadow-md shadow-teal-800/70 bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[50px] sm:rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center"
           >
             <div className="absolute inset-0">
               <Image
@@ -63,8 +63,8 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
               />
             </div>
             <div className="relative z-10 flex flex-col items-center">
-              <h1 className="text-3xl font-bold text-[#00454A] text-center mb-8">All Inclusive Umrah Packages with Guided Tour</h1>
-              <p className="text-[#00454A] mb-3 font-medium max-w-md text-center">
+              <h1 className="text-3xl font-semibold text-[#00454A] text-center mb-8">All Inclusive Umrah Packages with Guided Tour</h1>
+              <p className="text-[#00454A] mb-3 max-w-md text-center">
                 All packages include flights, visa processing,
                 accommodation near Haram, ground transport,
                 and a guided tour. Meals are optional.
@@ -96,18 +96,13 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         </div> */}
 
       </header>
+
       <main className="flex flex-col gap-24 bgOverlay">
         <BgOverlay />
         <div
           id="query-form-section"
           className="pt-16 px-3 flex flex-col justify-center items-center gap-5"
         >
-          {/* <h1 className="font-bold brand-blue text-2xl sm:text-3xl text-center">
-            Plan Your Umrah Today!
-          </h1> */}
-          {/* <p className="text-gray-500">
-            Plan Your Umrah Today!
-          </p> */}
           <QueryFormNew />
         </div>
 
@@ -132,7 +127,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             </button> */}
             <a target="_blank" href="https://www.youtube.com/@alhabibtraveluk" type="button" className="text-center min-w-48 w-min bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Visit YouTube Channel</a>
           </div>
-          <iframe
+          {/* <iframe
             id="yt-video-iframe"
             className="w-full max-w-[600px] rounded-xl"
             src="https://www.youtube.com/embed/PP2JlHwupqE?si=jvieRT0a5MDbCmze"
@@ -141,7 +136,12 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
+          <video
+            src="/vid/yt-video-section.mp4"
+            autoPlay loop controls
+            className="w-full max-w-[400px] rounded-xl"
+          ></video>
         </div>
 
         <div

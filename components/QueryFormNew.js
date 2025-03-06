@@ -104,8 +104,8 @@ export default function QueryFormNew(contactPage=false, heading=true) {
                     {/* Transport */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="transportInput" className="text-white font-semibold">Local Transport</label>
-                        <select disabled={formSubmitted || loading} name="transport" placeholder="Yes" id="transportInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none" >
-                            <option value="Yes" selected>Yes</option>
+                        <select defaultValue={'Yes'} disabled={formSubmitted || loading} name="transport" placeholder="Yes" id="transportInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none" >
+                            <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
                     </div>
@@ -113,8 +113,8 @@ export default function QueryFormNew(contactPage=false, heading=true) {
                     {/* Month of Departure */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="monthofdepartureInput" className="text-white font-semibold">Month of Travel</label>
-                        <select disabled={formSubmitted || loading} name="month_of_departure" placeholder="October" id="monthofdepartureInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none" >
-                            <option value="January" selected>January</option>
+                        <select defaultValue={'January'} disabled={formSubmitted || loading} name="month_of_departure" placeholder="October" id="monthofdepartureInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none" >
+                            <option value="January">January</option>
                             <option value="February">February</option>
                             <option value="March">March</option>
                             <option value="April">April</option>
@@ -138,8 +138,8 @@ export default function QueryFormNew(contactPage=false, heading=true) {
                     {/* Airport */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="airportInput" className="text-white font-semibold">Departure Airport</label>
-                        <select disabled={formSubmitted || loading} placeholder="London Airport" id="airportInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none">
-                            <option value="London Airtport" selected>London Airtport</option>
+                        <select defaultValue={'London Airtport'} disabled={formSubmitted || loading} placeholder="London Airport" id="airportInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none">
+                            <option value="London Airtport">London Airtport</option>
                             <option value="UK Airtport">UK Airtport</option>
                         </select>
                     </div>
@@ -147,8 +147,8 @@ export default function QueryFormNew(contactPage=false, heading=true) {
                     {/* Duration */}
                     <div className="flex flex-col gap-2 flex-wrap">
                         <label htmlFor="durationInput" className="text-white font-semibold">Duration</label>
-                        <select disabled={formSubmitted || loading} placeholder="10 days" id="durationInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none">
-                            <option value="7" selected>7 days</option>
+                        <select defaultValue={'7'} disabled={formSubmitted || loading} placeholder="10 days" id="durationInput" type="text" className="text-black rounded-md p-3 outline-none bg-white border-none">
+                            <option value="7">7 days</option>
                             <option value="10">10 days</option>
                             <option value="14">14 days</option>
                             <option value=">14">14+ days</option>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
@@ -7,6 +7,10 @@ import ContactCardNav from "./ContactCardNav";
 
 export default function Navbar() {
   const [isFixed, setIsFixed] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
+  const menuButtonRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       window.scrollY > 0 ? setIsFixed(true) : setIsFixed(false);
@@ -16,18 +20,28 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
   const toggleMobileMenu = () => {
-    document.getElementById("mobile-menu").classList.toggle("open");
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-  const closeMobileMenu = (event) => {
-    document.getElementById("mobile-menu").classList.remove("open");
-  };
-  const openMobileMenu = () => {
-    const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.classList.add("open");
-  };
+
   const handleLinkClick = () => {
-    closeMobileMenu();
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -95,8 +109,11 @@ export default function Navbar() {
         </li>
       </ul>
       <div
+        ref={mobileMenuRef}
         id="mobile-menu"
-        className="z-[1000] fixed flex flex-col py-5 gap-5 top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3"
+        className={`z-[1000] fixed flex flex-col py-5 gap-5 top-0 bottom-0 -left-3/4 md:-left-1/3 transition-all duration-300 bg-white w-3/4 md:w-1/3 ${
+          isMobileMenuOpen ? 'translate-x-full' : ''
+        }`}
       >
         <div className="px-5">
           <Image
@@ -110,7 +127,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/"
             >
               Home
@@ -119,7 +136,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/#pkg-listing-section"
             >
               Umrah Packages
@@ -128,7 +145,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/ramadam-umrah-packages"
             >
               Ramadan Packages
@@ -137,7 +154,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/makkah-hotels"
             >
               Makkah Hotels
@@ -146,7 +163,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/madinah-hotels"
             >
               Madinah Hotels
@@ -155,7 +172,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/visa"
             >
               Visa
@@ -164,7 +181,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/contact"
             >
               Contact
@@ -173,7 +190,7 @@ export default function Navbar() {
           <li className="">
             <Link
               onClick={handleLinkClick}
-              className="text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
+              className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
               href="/about"
             >
               About Us
@@ -201,6 +218,7 @@ export default function Navbar() {
           color="brand-yellow"
         />
         <button
+          ref={menuButtonRef}
           type="button"
           onClick={toggleMobileMenu}
           className="block border rounded-md py-2 px-5"

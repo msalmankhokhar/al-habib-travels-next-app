@@ -25,7 +25,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-floating-whatsapp": "^5.0.8",
-    "reactjs-popup": "^2.0.6"
+    "reactjs-popup": "^2.0.6",
+    "swiper": "^11.2.5"
   },
   "devDependencies": {
     "eslint": "^8",
