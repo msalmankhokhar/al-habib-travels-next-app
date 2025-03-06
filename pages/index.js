@@ -62,9 +62,9 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
                 className="opacity-10"
               />
             </div>
-            <div className="relative z-10 flex flex-col items-center gap-8">
-              <h1 className="text-3xl font-bold text-[#00454A]">All Inclusive Umrah Packages with Guided Tour</h1>
-              <p className="text-[#00454A] font-medium max-w-md text-center">
+            <div className="relative z-10 flex flex-col items-center">
+              <h1 className="text-3xl font-bold text-[#00454A] text-center mb-8">All Inclusive Umrah Packages with Guided Tour</h1>
+              <p className="text-[#00454A] mb-3 font-medium max-w-md text-center">
                 All packages include flights, visa processing,
                 accommodation near Haram, ground transport,
                 and a guided tour. Meals are optional.
