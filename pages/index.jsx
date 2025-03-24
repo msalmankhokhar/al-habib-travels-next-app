@@ -5,7 +5,7 @@ import Head from "@/components/Head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Package from "@/models/Package";
-import bgImg from "@/public/img/posters/4.jpg";
+import bgImg from "@/public/img/bg.png"; // Background image
 import Reviews from "@/components/Sections/Reviews";
 import Faqs from "@/components/Sections/Faqs";
 import Partners from "@/components/Sections/Partners";
@@ -27,7 +27,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
       <header className="relative flex flex-col">
         <TopBanner />
         <Navbar />
-        {/* <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur"/> */}
+        <Image decoding="async" fill className="max-w-screen-xl mx-auto" objectFit="cover" objectPosition="center" alt="cover photo hajj" src={bgImg} placeholder="blur" />
 
         {/* Old header start */}
         {/* <div
@@ -48,7 +48,7 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
         {/* Old header end */}
 
         {/* New header */}
-        <div className="bg-white">
+        {/* <div className="bg-white">
           <div
             id="header-content"
             className="shadow-md shadow-teal-800/70 bg-[#E1F4F5] overflow-hidden relative w-full py-16 rounded-b-[50px] sm:rounded-b-[90px] flex-1 px-3 sm:px-5 flex flex-col items-center justify-center"
@@ -84,26 +84,41 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
               </Link>
             </div>
           </div>
-        </div>
-
-
-        {/* <div id="header-content" className="z-10 h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
-          <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col gap-7">
-            <p className="tracking-wide header-text font-bold text-4xl text-white">Plan Your Sacred Journey With Our Exclusive Travel Packages</p>
-            <p className="tracking-wide header-text font-semibold text-sm text-white">Discover Our Tailored Umrah Packages and Begin Your Spiritual Experience Today</p>
-            <Link scroll={false} href={`/#pkg-listing-section`} className="text-center w-min min-w-36 bg-teal-900 hover:bg-teal-800 transition-colors duration-300 text-sm p-3 text-white rounded-full">Book Now</Link>
-          </div>
         </div> */}
+
+
+        <div id="header-content" className="z-10 h-full flex-1 px-3 py-10 flex flex-col items-center justify-center gap-5">
+          <div id="header-text-wrapper" className="max-w-xl p-7 sm:p-10 rounded-xl flex flex-col items-center gap-7">
+            <p className="tracking-wide header-text font-bold text-4xl text-white text-center">All Inclusive Umrah Packages with Guided Tour</p>
+            <p className="tracking-wide header-text text-white text-center">All packages include flights, visa processing, accommodation near Haram, ground transport, and a guided tour. Meals are optional.</p>
+            <Link scroll={false} href={`/#pkg-listing-section`} className="text-center min-w-36 bg-brand-primary font-semibold transition-colors duration-300 text-sm p-3 text-white rounded-full">Get Quote - It&apos;s free</Link>
+          </div>
+        </div>
 
       </header>
 
       <main className="flex flex-col gap-24 bgOverlay">
         <BgOverlay />
+
+        {/* Text section */}
+        <div className="mt-16 px-5 sm:px-7 flex flex-col items-center">
+          <h1 className="max-w-screen-lg text-center text-3xl font-semibold mb-5 text-brand-primary-600">As Londener Muslim, head to Umrah from your backyard at any time of 2025 in your own style with Umrah Packages from London</h1>
+          <p className="max-w-screen-lg text-center">Holidays! Serene weather! Sacred months! Off-peak season! When it comes to booking an Umrah tour from London, we know every Londener Muslim has unique preferences - so we&apos;ve designed a collection of Umrah Packages from London with you in mind. December Umrah Packages, Ester Umrah Packages, Ramadan Umrah Packages, Shaban Umrah Packages, Umrah Packages after Hajj, Summer Umrah Packages, Winter Umrah Packages and November Umrah Packages.</p>
+        </div>
+
         <div
           id="query-form-section"
-          className="pt-16 px-3 flex flex-col justify-center items-center gap-5"
+          className="px-3 flex flex-col justify-center items-center gap-5"
         >
           <QueryFormNew />
+        </div>
+
+        {/* Text section */}
+        <div className="px-5 sm:px-7 flex flex-col items-center">
+          <h1 className="max-w-screen-lg text-center text-3xl font-semibold mb-5 text-brand-primary-600">Cheap Umrah Packages with Flights From USA 2025</h1>
+          <p className="max-w-screen-lg text-center">
+            For the people looking to embark on this beautiful journey of visiting the Holy Place of Allah, our company has come up with a number of options to opt for. With each package having a different level of amenities provided to the customers. <Link href="/#" className="text-blue-500">Read more</Link>
+          </p>
         </div>
 
         <div
@@ -148,6 +163,13 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
           id="pkg-listing-section"
           className="px-5 flex flex-col justify-center items-center gap-5"
         >
+
+          {/* Text section */}
+          <div className="px-5 mt-5 sm:px-7 flex flex-col items-center">
+            <p className="max-w-screen-lg text-center">
+            People who dream to take a trip to Saudia Arabia in order to visit the Kabba and perform Umrah try their level best to choose an option that would give them maximum comfort. As the whole procedure of performing Umrah is itself a difficult one, they try to dig deep while searching for the right, <Link href="/#" className="text-blue-500">Read more</Link>
+            </p>
+          </div>
           <h1 className="font-bold brand-blue text-3xl">Popular Packages</h1>
           <div className="pkg-container flex flex-wrap gap-5 justify-center">
             {popularPkgs.length > 0 ? (
@@ -176,6 +198,12 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             )}
           </div>
           {/* <button type="button" className="min-w-36 w-min border bg-gray-100 hover:bg-white transition-colors duration-300 text-sm p-3 rounded-full">Load More</button> */}
+          {/* Text section */}
+          <div className="px-5 mt-5 sm:px-7 flex flex-col items-center">
+            <p className="max-w-screen-lg text-center">
+              The economy umrah package offered by the company to its customers comes with three special offers; five days package, seven days package and the double room package. Each particular offer and package comes with its own significant facilities. By paying merely an amount of 69$ per night, <Link href="/#" className="text-blue-500">Read more</Link>
+            </p>
+          </div>
         </div>
 
         <div
@@ -193,6 +221,12 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
             )}
           </div>
           {/* <button type="button" className="min-w-36 w-min border bg-gray-100 hover:bg-white transition-colors duration-300 text-sm p-3 rounded-full">Load More</button> */}
+          {/* Text section */}
+          <div className="px-5 mt-5 sm:px-7 flex flex-col items-center">
+            <p className="max-w-screen-lg text-center">
+            Silver umrah package contains special package deal options from which the customers can choose whatever comes within their budget. These USA Umrah packages 2025 also come in three options including the 5 nights stay, 7 nights stay and the 10 nights stay. While opting for the first option, <Link href="/#" className="text-blue-500">Read more</Link>
+            </p>
+          </div>
         </div>
 
         <SpecialOffer />
