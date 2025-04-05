@@ -19,9 +19,9 @@ export default function Home({ popularPkgs, fourStarPkgs, threeStarPkgs }) {
   return (
     <>
       <Head
-        title={"Al Habib Travel UK"}
+        title={"Best Umrah Package 2025 - Umrah Travel Agency in UK"}
         desc={
-          "Al Habib Travel is the most trusted & reliable agency among UK Muslims. We provide bespoke Umrah travel solutions & package designing services to meet budget range and facilities requirements of pilgrims."
+          "Book Your Umrah Package in UK with AL Habib Travel,  We have all inclusive packages for you next umrah journey. We brings exclusive Umrah deals including flights, hotels, visa etc."
         }
       />
       <header className="relative flex flex-col">
