@@ -14,9 +14,9 @@ export default function visa() {
   return (
     <div>
       <Head
-        title={"Saudi Visa Services | Fast & Reliable E-Visa Processing"}
+        title={"Apply For Umrah Visa Online with Al Habib Travels"}
         desc={
-          "Quick and hassle-free Saudi visa processing for UK residents. Get your Umrah E-visa in 24-48 hours. Professional guidance, competitive rates, and 24/7 support. IATA certified agent with 15+ years experience."
+          "Quick and hassle-free Umrah visa processing for UK residents. Get your Umrah E-visa in 24-48 hours. Professional guidance, competitive rates, and 24/7 support."
         }
       />
       <TopBanner/>

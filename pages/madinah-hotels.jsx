@@ -15,9 +15,9 @@ export default function madinahHotels() {
   return (
     <>
       <Head
-        title={"Madinah Hotels Near Masjid Al Nabawi | Best Locations"}
+        title={"Top 10 Hotels in Madinah - Book Online with Al Habib"}
         desc={
-          "Find the perfect hotel in Madinah near Prophet's Mosque. Compare 5-star luxury to budget-friendly 3-star hotels, all within walking distance to Masjid Al Nabawi. Book with ATOL protection. 24/7 support available."
+          "Find the Best hotel in Madinah near Prophet's Mosque. Compare 5-star luxury to budget-friendly 3-star hotels, all within walking distance to Masjid Al Nabawi."
         }
         imgSrc="/img/hotels/madinah.png"
       />

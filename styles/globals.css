@@ -56,7 +56,7 @@ html {
 }
 
 .pkgcard .imgHolder {
-  aspect-ratio: 10/7;
+  aspect-ratio: 7/5;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -33,9 +33,9 @@ export default function RamadanUmrahPackages({
   return (
     <>
       <Head
-        title={"Ramadan Umrah Packages"}
+        title={"Ramadan Umrah Packages 2025 - Book From UK "}
         desc={
-          "Book your blessed Ramadan Umrah Package 2025 with Al Habib Travel UK. Experience 70x more spiritual rewards with our exclusive 3, 4, and 5-star packages starting from £995. Includes flights, hotels near Haram, visa, and ground transport. Special discounts for early bookings and groups. ATOL & IATA protected. Call 0203 504 2344 now!"
+          "Best Ramadan Umrah Packages with special offers and discounts, We offer all inclusive umrah package from affordable 3 Star to luxury 5 star umrah packages."
         }
       />
       <header className="relative flex flex-col">

@@ -78,7 +78,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link className="text-sm" href="/ramadam-umrah-packages">
+          <Link className="text-sm" href="/ramadan-umrah-packages">
             Ramadan Packages
           </Link>
         </li>
@@ -146,7 +146,7 @@ export default function Navbar() {
             <Link
               onClick={handleLinkClick}
               className="mobile-menu-link text-sm block border px-5 py-3 transition-colors duration-200 hover:text-white hover:bg-teal-700"
-              href="/ramadam-umrah-packages"
+              href="/ramadan-umrah-packages"
             >
               Ramadan Packages
             </Link>

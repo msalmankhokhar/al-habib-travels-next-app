@@ -15,9 +15,9 @@ export default function makkahHotels() {
   return (
     <>
       <Head
-        title={"Makkah Hotels Near Haram | 3 to 5 Star Accommodation"}
+        title={"Book Best Hotels in Makkah - Best Place to Stay in Mecca"}
         desc={
-          "Book luxury hotels in Makkah near Haram with Al Habib Travel. From 5-star Clock Tower to affordable 3-star options, all walking distance from Masjid Al Haram. Compare prices, amenities & distances. Expert support available 24/7."
+          "Book from best Hotels in Makkah like - Sheraton Makkah Jabal Al Kaaba, Shaza Makkah, Anjum Makkah, Book 5 Star rated hotels in mecca with Al Habib Travels."
         }
         imgSrc="/img/hotels/makkah.png"
       />

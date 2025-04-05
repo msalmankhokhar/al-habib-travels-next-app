@@ -19,10 +19,9 @@ export default function PackageDetail({ pkg }) {
     return (
         <>
             <Head
-                title={`${pkg.title}`}
-                desc={`Al Habib Travel is offering ${pkg.nights}-night, ${pkg.rating}-star Umrah packages, commonly referred to a "one-week Umrah Packages", at a highly competitive price of &pound; ${pkg.price}. These packages are ideal for budget-conscious pilgrims seeking a shorter Umrah experience. Accommodation is provided in ${pkg.rating}-star hotels, with ${pkg.makkahNights || defaultProps.madinahNights} nights at 
-                ${pkg.makkahHotel} in Mecca and ${pkg.madinahNights || defaultProps.madinahNights} nights at ${pkg.madinahHotel} in Madinah, in quad-sharing rooms. Umrah flights can be added to the package, but services such as Ziarats (tours), breakfast, and transport are not included and can be arranged separately if required.`}
-                imgSrc={pkg.imgSrc || defaultProps.imgSrc}
+                title={`Best ${pkg.title} - Al Habib Travel`}
+                keywords={`Umrah, Umrah Packages, Al Habib Travel, ${pkg.title}`}
+                desc={`Book ${pkg.title} with ${pkg.makkahNights} nights in ${pkg.makkahHotel.toUpperCase()} and ${pkg.madinahNights} nights in ${pkg.madinahHotel.toUpperCase()} for a best Umrah experience.`}
             />
             <Navbar />
             <main className="px-5 pb-5 max-w-screen-xl mx-auto">
